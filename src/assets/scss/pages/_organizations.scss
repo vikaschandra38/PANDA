@@ -1,0 +1,259 @@
+.organizations {
+    section {
+        &.section-hero {
+            margin-bottom: 94px;
+
+            .cover {
+                position: relative;                
+                min-height: 572px;
+                border-top-left-radius: 250px !important;
+                border-top-right-radius: 250px !important;
+                background: url(../../images/organizations/cover-bg.png) no-repeat;
+                background-size: cover;
+
+                .section-title {
+                    position: absolute;
+                    margin-bottom: 0px;
+                    left: 24px;
+                    bottom: 24px;
+                    color: #F5F1ED;
+                }
+            }
+
+            @media (max-width: 576px) {
+                margin-bottom: 26px;
+
+                .cover {
+                    min-height: 166px;
+                    border-top-left-radius: 64px !important;
+                    border-top-right-radius: 64px !important;
+
+                    .section-title {
+                        left: 6px;
+                        bottom: 6px;
+                    }
+                }
+            }
+        }
+
+        &.section-intro {
+            margin-bottom: 200px;
+            
+            .section-title {
+                margin-bottom: 0px;
+            }
+
+            @media (max-width: 576px) {
+                margin-bottom: 76px;
+            }
+            
+        }
+
+        &.section-experts {
+            margin-bottom: 204px;
+
+            .section-title {
+                margin-bottom: 84px;
+            }
+
+            .expert-list {
+                .card {
+                    margin-bottom: 164px;
+                 }
+                
+                 .col-xl-4 {
+                    &:nth-child(3n){
+                        .card {
+                            .card-body {
+                                text-align: right !important;                       
+                            }
+                        }                        
+                    }
+
+                    &:nth-child(3n - 1){
+                        .card {
+                            .card-body {
+                                text-align: center !important;                       
+                            }
+                        }                        
+                    }
+                }
+            }
+
+            @media (max-width: 576px) {
+                margin-bottom: 70px;
+
+                .section-title {
+                    margin-bottom: 27px;
+                }
+
+                .expert-list {
+                    .card {
+                        margin-bottom: 32px;
+                    }
+                }                
+            }
+        }
+
+        &.section-travel-map {
+            margin-bottom: 186px;
+
+            .section-title {
+                margin-bottom: 128px;
+            }
+
+            .cover {
+                position: relative;
+                min-height: 572px;
+                border-top-left-radius: 250px !important;
+                border-top-right-radius: 250px !important;
+                background: url(../../images/organizations/world-map.png) no-repeat;
+                background-size: cover;
+
+            }
+
+            @media (max-width: 576px) {
+                margin-bottom: 70px;
+
+                .section-title {
+                    margin-bottom: 40px;
+                }
+
+                .cover {
+                    min-height: 520px;
+                    border-top-left-radius: 64px !important;
+                    border-top-right-radius: 64px !important;
+                    background: url(../../images/organizations/world-map-small.png) no-repeat;
+                    background-size: cover;
+                }
+                
+            }
+        }
+
+        &.section-events {
+            margin-bottom: 200px;
+
+            .section-title {
+                margin-bottom: 85px;
+            }
+
+            .event-list {
+                .card {
+                    margin-bottom: 48px;
+                 }
+                
+                 >.col-xl-6 {
+                    margin-bottom: 48px;
+                    border-bottom: 1px solid #E0E0E0;
+
+                    &:nth-child(2n){
+                        .card {
+                            .card-body {
+                                padding-left: 34px;
+                            }
+                        }                        
+                    }
+
+                    &:nth-child(2n - 1){
+                        .card {
+                            margin-bottom: 36px;
+
+                            .card-body {
+                                padding-right: 34px;                       
+                            }
+                        }                        
+                    }
+                }
+            }
+            
+            @media (max-width: 576px) {
+                margin-bottom: 64px;
+
+                .event-list {
+                    >.col-xl-6 {
+                        margin-bottom: 36px;
+
+                        .card {
+                            .card-body {
+                                padding: 0px !important;
+                            }
+                        }
+                    }
+                }
+            }            
+        }
+
+        &.section-notifications {
+            margin-bottom: 200px;
+
+            .cover {
+                position: relative;                
+                min-height: 572px;
+                border-top-left-radius: 250px !important;
+                border-top-right-radius: 250px !important;
+                background: url(../../images/organizations/notifications.png) no-repeat;
+                background-size: cover;
+            }
+
+            .card {
+                height: 70%;
+                margin-bottom: 0px;
+                
+                .card-body {
+                    padding: 100px 22px 60px 22px;
+                    border-top-left-radius: 250px !important;
+                    border-top-right-radius: 250px !important;
+
+                    img {
+                        width: 22px;
+                        height: 22px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+
+            h2 {
+                margin-top: 200px;   
+                margin-bottom: 34px;               
+            }
+
+            @media (max-width: 576px) {
+                margin-bottom: 70px;
+
+                .cover {
+                    min-height: 164px;
+                    border-top-left-radius: 124px !important;
+                    border-top-right-radius: 124px !important;
+                }
+
+                .card {
+                    min-height: 100%;
+                    
+                    .card-body {
+                        padding: 28px 14px 20px 14px;
+                        border-top-left-radius: 124px !important;
+                        border-top-right-radius: 124px !important;
+
+                        img {
+                            width: 18px;
+                            height: 18px;
+                            margin-bottom: 8px;
+                        }
+                        
+                        .btn-rounded {
+                            padding: 8px 26px;
+                            min-width: auto;
+                            font-size: 11px;
+                            line-height: 12px;
+                        }
+                    }
+                }
+
+                h2 {
+                    margin-top: 70px;  
+                    margin-bottom: 24px;              
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+<div class="card card-announcement">
+    <div class="card-body border-black">
+        <div class="d-flex flex-column justify-content-between h-100">
+            <div class="d-block">
+                <div class="d-flex align-items-stretch mb-3">
+                    <div class="flex-grow-1">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar-sm">
+                                <img class="rounded-circle" src="{{'../../../assets/images/experts/' + announcement['profileImg'] + '.png'}}"> 
+                            </div>
+                            
+                            <div class="d-block ms-2">
+                                <h5 class="mb-0"><strong>{{announcement['organizationName']}}</strong></h5>
+                                <h6 class="mb-0">{{announcement['jobTitle']}}</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 pt-2">
+                        <h5 class="bg-asterisk mb-0"><strong>{{announcement['country']}}</strong></h5>
+                    </div>
+                </div>
+        
+                <div class="d-flex mb-2">
+                    <div class="flex-grow-1">
+                        <ul class="sectors">
+                            <ng-container *ngFor="let sector of announcement['sectors']; let i = index">
+                                <li><a href="#" class="text-red">{{sector['sectorName']}}</a></li>
+                            </ng-container>                    
+                        </ul>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <h6>{{announcement['postedOn']}}</h6>
+                    </div>
+                </div>
+        
+                <h4 class="mb-4"><strong>Looking for a co-founder for a hydroponics startup</strong></h4>
+        
+                <p>Tomorrow we will practice making different coffee recipes. It is important that you wear close-toed shoes. Please
+                    message me if you have any questions!</p>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <a class="view-more" href="#">View more</a>
+            </div>   
+        </div>
+    </div>
+</div>
+

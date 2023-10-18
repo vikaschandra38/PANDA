@@ -1,0 +1,36 @@
+<div class="card card-event">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-7 col-xl-6">
+                <div class="d-flex flex-column align-items-start justify-content-between h-100">
+                    <h5 class="mb-0"><strong>Posted By: {{event['userName']}}</strong></h5>
+    
+                    <div class="avatar-sm my-2 my-xl-0">
+                        <img class="rounded-circle" src="{{event['profileImg']}}">
+                    </div>
+        
+                    <div class="event-details">
+                        <h5 class="mb-0"><strong>The Event: <span class="text-red">{{event['eventTitle']}}</span></strong></h5>
+                        <h5 class="mb-0"><strong>Date: <span class="text-red">{{event['eventDate']}}</span></strong></h5>
+                        <h5 class="mb-0"><strong>Location: <span class="text-red">{{event['location']}}</span></strong></h5>
+                    </div>
+                    
+                    <div class="d-none d-xl-block">
+                        <p class="mb-0">{{event['eventDescription']}}</p>
+                    </div>     
+                </div>
+            </div>        
+            <div class="col-5 col-xl-6">
+                <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                    <img class="img-fluid rounded-circle" src="{{event['eventBanner']}}">
+                    <span class="shadow my-xl-4"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex d-xl-none">
+            <div class="col-12">
+                <p class="mt-4 mb-0">{{event['eventDescription']}}</p>
+            </div>
+        </div>
+    </div>
+</div>

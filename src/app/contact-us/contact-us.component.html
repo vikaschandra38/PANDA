@@ -1,0 +1,63 @@
+<div class="d-flex contactus">
+  <div class="d-flex col-left">
+    <div class="help">
+      <h3>How can we help you?</h3>
+      <div class="followus">
+        <p>Follow Us:</p>
+        <ul>
+          <li>
+            <img src="./../../assets/images/union_white.png">
+            Instagram
+          </li>
+          <li>
+            <img src="./../../assets/images/union_white.png">
+            Twitter
+          </li>
+          <li>
+            <img src="./../../assets/images/union_white.png">
+            Linkedin
+          </li>
+          <li>
+            <img src="./../../assets/images/union_white.png">
+            Facebook
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="extra-btm">
+
+    </div>
+  </div>
+  <div class="d-flex col-right">
+    <div class="form-outer">
+      <form [formGroup]="contactForm" (ngSubmit)="send()" class="form-cont">
+        <h1 class="form-title">
+          Contact us
+        </h1>
+        <div class="relative ">
+          <label for="fname" class="">First Name:</label>
+          <input formControlName="fName" type="text" id="fname" name="fName" class="" />
+        </div>
+        <div class="relative ">
+          <label for="lname" class="">Last Name:</label>
+          <input formControlName="lName" type="text" id="lname" name="lName" class="" />
+        </div>
+        <div class="relative ">
+          <label for="orgName" class="">First Name:</label>
+          <input formControlName="orgName" type="text" id="orgName" name="orgName" class="" />
+        </div>
+        <div class="relative">
+          <label for="email" class="">Email:</label>
+          <input formControlName="email" type="email" id="email" name="email" class="" />
+        </div>
+        <div class="relative">
+          <label for="message" class="">Message:</label>
+          <textarea formControlName="message" id="message" name="message" class=""></textarea>
+        </div>
+        <button type="submit" class="" [disabled]="!contactForm.valid">
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

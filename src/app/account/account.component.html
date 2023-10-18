@@ -1,0 +1,23 @@
+<div>
+    <div class="container-fluid account">
+        <div class="row g-0">
+            <div class="col-xl-8">
+                <div class="position-relative">
+                    <h2 class="position-absolute text-white welcome w-100" style="top: 20px; padding-left: 20px;">Welcome to PANDA</h2>
+                    <img src="assets/images/bg-auth-overlay.png" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="auth-full-page-content">
+                    <div class="d-flex justify-content-center mb-5">
+                        <ul class="top-nav">
+                            <li><a routerLink="/account/register" [routerLinkActive]="'active'">Join PANDA</a></li>
+                            <li><a routerLink="/account/login"  [routerLinkActive]="'active'">Sign in</a></li>
+                        </ul>
+                    </div>
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="d-block" id="loginForm">
+    <div class="card rounded-top text-center">
+        <div class="card-body bordered">
+
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+              <div class="bordered-form">
+                <img src="assets/images/union.png">
+
+                <h3>Sign in</h3>
+
+                <div class="form-group">   
+                  <input type="text" placeholder="Email address" formControlName="email" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+                  <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                    <div *ngIf="f['email'].errors['required']">Email is required</div>
+                    <div *ngIf="f['email'].errors['email']">Email must be a valid email address</div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input  placeholder="Password" type="password" formControlName="password" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+                  <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                    <div *ngIf="f['password'].errors['required']">Password is required</div>
+                  </div>
+                </div>
+                <div class="form-group fp">
+                  <p class="fpass" (click)="forgotPassword()">
+                    Forgot password?
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group mt-2">
+                <p class="acc-err" *ngIf="accountExists">{{accountExists}}</p>
+                <!-- <p class="acc-err" *ngIf="accountExists==='This email is not registered'">This email is not registered</p> -->
+
+                <button [disabled]="loading" class="btn btn-rounded">
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                  Sign In
+                </button>
+
+              </div>
+            </form>                              
+        </div>
+    </div>
+</div>
+

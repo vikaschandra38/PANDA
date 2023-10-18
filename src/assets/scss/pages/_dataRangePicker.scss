@@ -1,0 +1,64 @@
+.mat-datepicker-content-container,
+.mat-datepicker-content {
+  background-color: #F5F1ED !important;
+  border-radius: 8px !important;
+}
+
+.mat-datepicker-toggle,
+.mat-datepicker-content .mat-calendar-next-button,
+.mat-datepicker-content .mat-calendar-previous-button {
+  color: #1F1F1F !important;
+}
+
+.mat-calendar-body-active {
+  .mat-calendar-body-today {
+    color: #FFFFFF;
+    background-color: #A95454;
+  }
+}
+
+.mat-calendar-body-selected {
+  color: #FFFFFF !important;
+  background-color: #A95454 !important;
+}
+
+.mat-calendar-body-in-range::before {
+  background: #ECE9E6 !important;
+}
+.mat-calendar-body-in-range {
+  .mat-calendar-body-cell-content, .mat-date-range-input-separator {
+    color: #A95454;
+  }
+}
+
+.mat-calendar-body-cell-content {
+  border-width: 0px !important;
+}
+
+.mat-calendar-body-range-end {
+  .mat-calendar-body-cell-content {
+    border-width: 0px !important;
+    border-radius: 0px 10px 10px 0px !important
+  }
+}
+
+.mat-calendar-body-range-start {
+  .mat-calendar-body-cell-content {
+    border-width: 0px !important;
+    border-radius: 10px 0px 0px 10px !important
+  }
+}
+
+@media (hover: hover){
+  .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    background-color: #ECE9E6 !important;
+  }
+}
+.mat-calendar-body-cell-content.mat-calendar-body-today{
+  background-color: #A95454 !important;
+  color: white !important;
+}
+.mat-calendar-body-cell-content.mat-calendar-body-active {
+  background-color: #A95454 !important;
+  color: white !important;
+}

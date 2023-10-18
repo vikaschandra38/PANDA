@@ -1,0 +1,825 @@
+<div class="content-container expert-profile d-flex" id="expert-profile">
+  <div class="org-preview">
+    <p class="prev">Preview Page</p>
+    <div class="content-container expert-profile" *ngIf="previewData">
+      <section class="section-hero">
+        <div class="container-fluid">
+          <div class="row align-items-stretch justify-content-between">
+            <div class="col-6">
+              <div class="card text-center">
+                <div class="card-body border-dark">
+                  <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                    <div class="avatar-lg">
+                      <img class="rounded-circle" src="./../../../assets/images/experts/announcement-avatar.png">
+                    </div>
+
+                    <h1 class="title-left">{{previewData.profile.fname}} {{previewData.profile.lname}}</h1>
+
+                    <div
+                      class="d-flex flex-column flex-xl-row align-items-start align-items-xl-center justify-content-start w-100">
+                      <span class="bg-asterisk">{{previewData.profile.location}}</span>
+                      <!-- <span class="bg-asterisk">Morocco</span> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card text-center c-right">
+                <div class="card-body bg-dark">
+                  <div class="d-flex align-items-center justify-content-center h-100">
+                    <div class="d-block">
+                      <h1 class="title-r">Share this page</h1>
+
+                      <button class="btn btn-rounded">
+                        Share
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 col-xl-8">
+              <h2>“ {{previewData.profile.quote}} ”</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-about">
+        <div class="container-fluid">
+          <h1 class="section-title">Biography</h1>
+          <p class="web-site">
+            <img class="amo-img" src="./../../../assets/images/union.png">
+            Website: <span>{{previewData.contact.website}}</span>
+          </p>
+          <div class="row align-items-stretch justify-content-between amo">
+            <div class="col-12">
+              <p>
+                {{previewData.profile.biography}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-presentation">
+        <div class="container-fluid">
+          <div class="row align-items-top justify-content-between">
+            <div class="col-12">
+              <h1 class="section-title">Education</h1>
+
+              <div class="edu-cont d-flex flex-column">
+                <div *ngFor="let edu of previewData.education" class="d-flex educ">
+                  <div class="col">
+                    <p class="bold">
+                      <img class="amo-img" src="./../../../assets/images/union.png">
+                      School
+                    </p>
+                    <p class="val">
+                      {{edu.school}}
+                    </p>
+                  </div>
+                  <hr>
+                  <div class="col">
+                    <p class="bold">
+                      <img class="amo-img" src="./../../../assets/images/union.png">
+                      Degree
+                    </p>
+                    <p class="val">
+                      {{edu.degree}}
+                    </p>
+                  </div>
+                  <hr>
+                  <div class="col">
+                    <p class="bold">
+                      <img class="amo-img" src="./../../../assets/images/union.png">
+                      Field of studies
+                    </p>
+                    <p class="val">
+                      {{edu.field}}
+                    </p>
+                  </div>
+                  <hr>
+                  <div class="col">
+                    <p class="bold">
+                      <img class="amo-img" src="./../../../assets/images/union.png">
+                      Start date
+                    </p>
+                    <p class="val">
+                      {{edu.start | date}}
+                    </p>
+                  </div>
+                  <hr>
+                  <div class="col">
+                    <p class="bold">
+                      <img class="amo-img" src="./../../../assets/images/union.png">
+                      End Date
+                    </p>
+                    <p class="val">
+                      {{edu.end | date}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-news">
+        <div class="container-fluid">
+          <div class="row">
+            <h1 class="section-title">Professional Experience</h1>
+            <div class="col-12 experience-feed">
+              <div class="single-exp" *ngFor="let exp of previewData.experience">
+
+              </div>
+              <div class="col-5 exp-title">
+
+              </div>
+
+              <div class="col-7 exp-details">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section-job-offers">
+        <div class="container-fluid">
+          <h1 class="section-title">Hard and Soft Skills</h1>
+
+          <div class="row">
+            <div class="col-6 col-xl-4">
+              <div class="card card-job-offer text-center">
+                <div class="card-body border-black">
+                  <div class="d-flex flex-column align-items-stretch justify-content-between pb-4 h-100">
+                    <div class="row">
+                      <div class="col">
+                        <h5><strong>Job Type</strong></h5>
+                        <h5 class="text-red">Full-time</h5>
+                      </div>
+                      <div class="col">
+                        <a href="#">View</a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col d-none d-lg-block">
+                        <h5><strong>Status</strong></h5>
+                        <h5 class="text-red">Published</h5>
+                      </div>
+                      <div class="col">
+                        <a href="#">Delete</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-xl-4">
+              <div class="card card-job-offer text-center">
+                <div class="card-body border-black">
+                  <div class="d-flex flex-column align-items-stretch justify-content-between pb-4 h-100">
+                    <div class="row">
+                      <div class="col">
+                        <h5><strong>Job Type</strong></h5>
+                        <h5 class="text-red">Full-time</h5>
+                      </div>
+                      <div class="col">
+                        <a href="#">View</a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <h5><strong>Status</strong></h5>
+                        <h5 class="text-red">Published</h5>
+                      </div>
+                      <div class="col">
+                        <a href="#">Delete</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Languages -->
+      <section class="section-news languages">
+        <div class="container-fluid">
+          <div class="row">
+            <h1 class="section-title">Languages</h1>
+            <div class="col-12 experience-feed">
+              <div class="single-exp" *ngFor="let lang of previewData.language">
+                <p>{{lang.name}}</p>
+                <p>{{lang.level}}</p>
+                <img class="amo-img" src="./../../../assets/images/union.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Area of Interest -->
+      <section class="section-news interest">
+        <div class="container-fluid">
+          <div class="row">
+            <h1 class="section-title">Areas of interest</h1>
+            <div class="col-12 experience-feed">
+              <div class="single-exp" *ngFor="let int of previewData.interest">
+                <p>
+                  {{int}}
+                  <img class="amo-img" src="./../../../assets/images/union.png">
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Travel Map -->
+      <section class="section-news interest">
+        <div class="container-fluid">
+          <div class="row">
+            <h1 class="section-title">Expert Travel Map</h1>
+            <div class="col-12 experience-feed">
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Events -->
+      <section id="events" class="section-events">
+        <div class="events-slide">
+          <div class="container-fluid">
+            <div class="events-indicators">
+              <p class="indicator" *ngFor="let news of myEvents; let n=index" (click)="selectedEvent=n"
+                [ngClass]="{'active': selectedEvent===n}"></p>
+            </div>
+          </div>
+
+          <div class="events-inner">
+            <div class="event-item">
+              <div class="container-fluid">
+                <div class="row align-items-stretch justify-content-between">
+                  <div class="col-6 col-xl-3">
+                    <div class="d-flex flex-column justify-content-between h-100">
+                      <!-- <div class="d-flex align-items-center justify-content-start pne">
+                        <button class="btn btn-sm btn-circle ico-plus"></button>
+                        <h4 class="ms-2 mb-0">Post New Event</h4>
+                      </div> -->
+
+                      <h1 class="section-title">My events</h1>
+
+                      <p class="mt-4 mb-0 mb-xl-4">{{myEvents[selectedEvent].description}}</p>
+
+                      <div class="d-none d-xl-block pt-4">
+                        <p class="btn btn-rounded" (click)="selectedEvent = selectedEvent+1">Next Page</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-xl-8">
+                    <div class="row">
+                      <div class="col-xl-6">
+                        <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                          <img class="img-fluid rounded-circle mb-2 mb-xl-4" [src]="myEvents[selectedEvent].image">
+
+                          <div class="shadow my-xl-4"></div>
+                        </div>
+                      </div>
+                      <div class="col-xl-6">
+                        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                          <div class="d-block mt-4 mt-xl-0 pb-xl-4">
+                            <h5 class="mb-0"><strong>The Event: <span
+                                  class="text-red">{{myEvents[selectedEvent].title}}</span></strong>
+                            </h5>
+                            <h5 class="mb-0"><strong>Date: <span
+                                  class="text-red">{{myEvents[selectedEvent].date}}</span></strong></h5>
+                            <h5 class="mb-xl-4"><strong>Location: <span
+                                  class="text-red">{{myEvents[selectedEvent].location}}</span></strong></h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row d-xl-none">
+                  <div class="col-xl-12">
+                    <div class="text-center mt-4 pt-4">
+                      <p class="btn btn-rounded" (click)="selectedEvent = selectedEvent+1">Next Page</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section-contact-details">
+        <div class="container-fluid">
+          <div class="row align-items-stretch justify-content-between">
+            <div class="col-6 mx-auto">
+              <div class="d-flex justify-content-center">
+                <div class="card rounded-top text-center">
+                  <div class="card-body bg-dark">
+                    <h1 class="d-flex flex-column ce">
+                      <img src="./../../../assets/images/union_white.png">
+                      Contact the expert
+                    </h1>
+
+                    <div class="d-flex justify-content-center mt-5">
+                      <a class="btn btn-rounded" href="mailto:{{previewData.contact.email}}">Send an email</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 mx-auto right">
+              <div class="d-flex justify-content-center">
+                <div class="card rounded-top text-center">
+                  <div class="card-body border-dark">
+                    <p class="titles">
+                      <img src="./../../../assets/images/union.png">
+                      Preferences
+                    </p>
+                    <ul class="pref">
+                      <li *ngFor="let pref of previewData.preferences">
+                        I am interested in {{pref}}
+                      </li>
+                    </ul>
+
+                    <div class="d-flex justify-content-center flex-column mt-5">
+                      <p class="titles">
+                        <img src="./../../../assets/images/union.png">
+                        Available for collaboration opportunities in Africa?
+                      </p>
+                      <p class="status">{{previewData.profile.availability}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="org-profile">
+    <h1 class="prf-ttl">
+      My Profile
+    </h1>
+    <div class="form-cont">
+      <div class="status">
+        <div class="initials-status d-flex justify-content-between align-items-center">
+          <p>
+            <span>{{profileProgress}}%</span>
+            Profile completeness
+          </p>
+          <p class="lang">(English)</p>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" [style]="'width: '+profileProgress+'%'" aria-valuenow="0" aria-valuemin="0"
+            aria-valuemax="100"></div>
+        </div>
+      </div>
+
+      <!-- Organization Details -->
+      <div class="general-info">
+        <h3>
+          Personal information
+          <img src="./../../../assets/images/union.png">
+        </h3>
+        <div class="form-field">
+          <p class="label">First Name*: <span>( max 50 characters)</span></p>
+          <input [(ngModel)]="myProfile.fname" [maxlength]="'50'" type="text" id="fname" name="fname" class="" />
+        </div>
+        <div class="form-field">
+          <p class="label">Last name*: <span>( max 50
+              characters)</span></p>
+          <input [(ngModel)]="myProfile.lname" [maxlength]="'50'" type="text" id="lname" name="lname" class="" />
+        </div>
+        <div class="form-field">
+          <p class="label">Profile title*: <span>( max 220
+              characters)</span></p>
+            <textarea [(ngModel)]="myProfile.title" [maxlength]="'220'" id="title" name="title" class="textarea p-title"></textarea>
+        </div>
+
+        <div class="form-field">
+          <p class="label">Location*: </p>
+          <input [(ngModel)]="myProfile.location" type="text" id="location" name="location" class="" />
+        </div>
+        <div class="form-field">
+          <p class="label">Quote: <span>( max 220
+              characters)</span></p>
+          <textarea [(ngModel)]="myProfile.quote" [maxlength]="'220'" id="quote" name="quote" class="textarea"></textarea>
+        </div>
+
+        <div class="form-field">
+          <p class="label">Biography: <span>( max 2600 characters)</span></p>
+          <textarea [(ngModel)]="myProfile.biography" [maxlength]="'2600'" id="biography" name="biography" class="textarea"></textarea>
+        </div>
+
+        <div class="form-field">
+          <p class="label">Upload a photo : <span class="upload">upload</span></p>
+          <input [(ngModel)]="myProfile.orgPic" type="text" id="orgPic" name="orgPic" class="" />
+        </div>
+
+        <div class="form-field">
+          <p class="label">Add a video link :</p>
+          <input [(ngModel)]="myProfile.video" type="text" id="video" name="video" class="" />
+        </div>
+
+        <div class="form-field">
+          <p class="label">Preferences*</p>
+          <div class="checkboxes d-flex flex-wrap">
+            <div class="relative" *ngFor="let type of preferences; let i=index">
+              <label class="container check-container">{{type.title}}
+                <input type="checkbox" [value]="preferences[i].value" (change)="checkPrefrence(i, $event)" [checked]="myProfile.preferences.indexOf(preferences[i].value) > -1">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <p class="label">Are you available for collaboration opportunities in Africa?*</p>
+          <div class="checkboxes d-flex flex-wrap">
+            <div class="relative">
+              <label class="container check-container">Yes, immediately
+                <input type="radio" [(ngModel)]="myProfile.availability" [value]="'yes'">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="relative">
+              <label class="container check-container">No, not at the moment
+                <input type="radio" [(ngModel)]="myProfile.availability" [value]="'no'">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Details -->
+      <div class="general-info">
+        <div class="topbar">
+          <h3>
+            Education
+            <img src="./../../../assets/images/union.png">
+          </h3>
+          <div class="add-more" (click)="addEducation()">
+            <p class="i-c">
+              <img src="./../../../assets/images/plus.png">
+            </p>
+            <p>Add</p>
+          </div>
+        </div>
+
+
+        <div class="edu-containers" *ngFor="let edu of education; let i=index">
+          <h3 *ngIf="i>0">School {{i}}</h3>
+          <div class="form-field">
+            <p class="label">School*:</p>
+            <input [(ngModel)]="edu.school" type="text"  name="school" class="" />
+          </div>
+
+          <div class="form-field">
+            <p class="label">Degree :</p>
+            <input [(ngModel)]="edu.degree" type="text" name="degree" class="" />
+          </div>
+
+          <div class="form-field">
+            <p class="label">Field of studies:</p>
+            <input [(ngModel)]="edu.field" type="text" name="field" class="" />
+          </div>
+
+          <div class="form-field">
+            <p class="label">Start date:</p>
+            <div class="dp">
+              <input [(ngModel)]="edu.start" matInput [matDatepicker]="picker" class="dpkr" />
+              <mat-datepicker #picker></mat-datepicker>
+              <p class="act" (click)="picker.open()">choose</p>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <p class="label">End date:</p>
+            <div class="dp">
+              <input [(ngModel)]="edu.end" matInput [matDatepicker]="pickerE" class="dpkr" />
+              <mat-datepicker #pickerE></mat-datepicker>
+              <p class="act" (click)="pickerE.open()">choose</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Details -->
+      <div class="general-info">
+        <div class="topbar">
+          <h3>
+            Professional experience
+            <img src="./../../../assets/images/union.png">
+          </h3>
+          <div class="add-more" (click)="addProfession()">
+            <p class="i-c">
+              <img src="./../../../assets/images/plus.png">
+            </p>
+            <p>Add</p>
+          </div>
+        </div>
+
+
+        <div class="edu-containers" *ngFor="let edu of professionalExp; let i=index">
+          <h3 *ngIf="i>0">Experience {{i}}</h3>
+          <div class="form-field">
+            <p class="label">Job title*:</p>
+            <input [(ngModel)]="edu.title" type="text" name="school" class="" />
+          </div>
+
+          <div class="form-field">
+            <p class="label">Description: <span>( max 15
+                characters)</span></p>
+            <textarea [(ngModel)]="edu.description" id="quote" name="quote" class="textarea"></textarea>
+          </div>
+
+          <div class="form-field">
+            <p class="label">Company name:*</p>
+            <input [(ngModel)]="edu.companyName" type="text" name="field" class="" />
+          </div>
+
+          <div class="form-field">
+            <p class="label">Location:<small>ex: Paris, France</small></p>
+            <input [(ngModel)]="edu.location" type="text" name="field" class="" />
+          </div>
+
+          <div class="form-field">
+            <p class="label">Sector*:</p>
+            <input [(ngModel)]="edu.sector" type="text" name="field" class="" />
+          </div>
+
+          <div class="form-field">
+            <p class="label">Type of employment:</p>
+            <div class="checkboxes d-flex flex-wrap">
+              <div class="relative" *ngFor="let type of typeOfEmployement; let i=index">
+                <label class="container check-container">{{type}}
+                  <input type="radio" [(ngModel)]="edu.employmentType" [value]="type">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <p class="label">Start date:</p>
+            <div class="dp">
+              <input [(ngModel)]="edu.start" matInput [matDatepicker]="pickerps" class="dpkr" />
+              <mat-datepicker #pickerps></mat-datepicker>
+              <p class="act" (click)="pickerps.open()">choose</p>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <p class="label">End date:</p>
+            <div class="dp">
+              <input [(ngModel)]="edu.end" matInput [matDatepicker]="pickerPE" class="dpkr" />
+              <mat-datepicker #pickerPE></mat-datepicker>
+              <p class="act" (click)="pickerPE.open()">choose</p>
+            </div>
+            <div class="relative mt-2">
+              <label class="container check-container">This is my current position
+                <input type="checkbox" [(ngModel)]="edu.end">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="general-info">
+        <div class="topbar">
+          <h3>
+            Hard and Soft Skills
+            <img src="./../../../assets/images/union.png">
+          </h3>
+          <div class="add-more">
+            <p>(max 15 skills)</p>
+          </div>
+        </div>
+
+        <div class="form-field add-skills">
+          <mat-chip-list #chipList>
+            <mat-chip *ngFor="let item of myProfile.skills; let i=index" [selectable]="true"
+              [removable]="removable" (removed)="removeEmail(item)" required name="chips">
+              {{item}}
+              <span matChipRemove *ngIf="removable">X</span>
+            </mat-chip>
+            <input [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes "
+              [matChipInputAddOnBlur]="true " (matChipInputTokenEnd)="add($event) " />
+          </mat-chip-list>
+        </div>
+
+      </div>
+
+      <!-- Language Info -->
+      <div class="general-info">
+        <div class="topbar">
+          <h3>
+            Languages
+            <img src="./../../../assets/images/union.png">
+          </h3>
+          <div class="add-more" (click)="addLang()">
+            <p class="i-c">
+              <img src="./../../../assets/images/plus.png">
+            </p>
+            <p>Add</p>
+          </div>
+        </div>
+
+
+        <div class="edu-containers" *ngFor="let edu of language; let i=index">
+          <h3 *ngIf="i>0">Language {{i}}</h3>
+          <div class="form-field">
+            <input [(ngModel)]="language[i].languageName" type="text" name="school" class="" />
+          </div>
+
+          <div class="form-field">
+            <div class="checkboxes d-flex flex-wrap">
+              <div class="relative">
+                <label class="container check-container">Basic knowledge
+                  <input type="radio" [(ngModel)]="edu.languageLevel" value="Basic knowledge">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="relative">
+                <label class="container check-container">Advanced professional competence
+                  <input type="radio" [(ngModel)]="edu.languageLevel" value="Advanced professional competence">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="relative">
+                <label class="container check-container">Limited professional competence
+                  <input type="radio" [(ngModel)]="edu.languageLevel" value="Limited professional competence">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="relative">
+                <label class="container check-container">Bilingual or native language
+                  <input type="radio" [(ngModel)]="edu.languageLevel" value="Bilingual or native language">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="relative">
+                <label class="container check-container">Intermediate professional competence
+                  <input type="radio" [(ngModel)]="edu.languageLevel" value="Intermediate professional competence">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Interest  -->
+      <div class="general-info">
+        <div class="topbar">
+          <h3>
+            Areas of interest
+            <img src="./../../../assets/images/union.png">
+          </h3>
+        </div>
+        <div class="form-field add-skills">
+          <mat-chip-list #chipListI>
+            <mat-chip *ngFor="let item of myProfile.interest; let i=index" [selectable]="true" [removable]="removable"
+              (removed)="removeInterest(item)" required name="chips">
+              {{item}}
+              <span matChipRemove *ngIf="removable">X</span>
+            </mat-chip>
+            <input [matChipInputFor]="chipListI" [matChipInputSeparatorKeyCodes]="separatorKeysCodes "
+              [matChipInputAddOnBlur]="true " (matChipInputTokenEnd)="addInterest($event) " />
+          </mat-chip-list>
+        </div>
+
+        <!-- <div class="form-field">
+          <input [(ngModel)]="myProfile.interest" type="text" id="interest" name="interest" class="" />
+        </div> -->
+      </div>
+
+      <!-- Contact Details  -->
+      <div class="general-info">
+        <div class="topbar">
+          <h3>
+            Contact details
+            <img src="./../../../assets/images/union.png">
+          </h3>
+        </div>
+        <div class="form-field">
+          <p class="label">Email*:</p>
+          <input [(ngModel)]="myProfile.email" type="email" id="email" name="email" class="" />
+        </div>
+
+        <div class="form-field">
+          <p class="label">Phone :</p>
+          <input [(ngModel)]="myProfile.phone" type="text" id="phone" name="phone" class="" />
+
+        </div>
+
+        <div class="form-field">
+          <div class="checkboxes d-flex flex-wrap">
+            <div class="relative">
+              <label class="container check-container">Home
+                <input type="radio" [(ngModel)]="myProfile.pType" value="Home">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="relative">
+              <label class="container check-container">Professional
+                <input type="radio" [(ngModel)]="myProfile.pType" value="Professional">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="relative">
+              <label class="container check-container">Mobile
+                <input type="radio" [(ngModel)]="myProfile.pType" value="Mobile">
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <p class="label">Website :</p>
+          <input [(ngModel)]="myProfile.website" type="url" id="website" name="website" class="" />
+        </div>
+      </div>
+
+      <!-- My travel Map  -->
+      <div class="general-info">
+        <div class="topbar">
+          <h3>
+            My travel Map
+            <img src="./../../../assets/images/union.png">
+          </h3>
+          <div class="add-more" (click)="addTravel()">
+            <p class="i-c">
+              <img src="./../../../assets/images/plus.png">
+            </p>
+            <p>Add</p>
+          </div>
+        </div>
+
+
+        <div class="edu-containers" *ngFor="let edu of travelMap; let i=index">
+
+          <div class="form-field">
+            <p class="label">Arrival :</p>
+            <div class="dp">
+              <input [(ngModel)]="edu.arrival" matInput [matDatepicker]="pickera" class="dpkr" />
+              <mat-datepicker #pickera></mat-datepicker>
+              <p class="act" (click)="pickera.open()">choose</p>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <p class="label">Departure :</p>
+            <div class="dp">
+              <input [(ngModel)]="edu.departure" matInput [matDatepicker]="pickerd" class="dpkr" />
+              <mat-datepicker #pickerd></mat-datepicker>
+              <p class="act" (click)="pickerd.open()">choose</p>
+            </div>
+          </div>
+          <div class="form-field">
+            <p class="label">Location :</p>
+            <input [(ngModel)]="edu.location" type="text" name="location" class="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Error Container -->
+      <div class="error-container">
+        <p *ngIf="profileErrors.profile">Profile fields are required.</p>
+        <p *ngIf="profileErrors.education">Education fields are required.</p>
+        <p *ngIf="profileErrors.language">Language fields are required.</p>
+        <p *ngIf="profileErrors.pExp">Professional Experience fields are required.</p>
+        <p *ngIf="profileErrors.travel">Travel Map fields are required.</p>
+      </div>
+      <!-- Action Container -->
+      <div class="action-container">
+        <button class="btn btn-rounded" (click)="saveProfile()">
+          Save
+        </button>
+        <p>Clear all</p>
+      </div>
+    </div>
+  </div>
+</div>

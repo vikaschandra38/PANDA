@@ -1,0 +1,38 @@
+<div class="card card-job-offer text-center">
+    <div class="card-body border-black">
+        <div class="d-flex flex-column justify-content-between h-100">
+            <div class="d-block mb-2 mb-xl-0">
+                <h3>{{jobOffer['jobTitle']}}</h3>
+                <p class="text-red mb-0">{{jobOffer['location']}}</p>
+            </div>
+    
+            <div class="row align-items-stretch justify-content-between">
+                <div class="col-6 col-xl-4">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <p class="text-red mb-0"><strong>{{jobOffer['jobType']}}</strong></p>
+                        <a class="favorites" href="#">+ Favorites</a>
+                    </div>
+                </div>
+                <div class="col-4 px-0 d-none d-xl-block">
+                    <div class="d-flex flex-column justify-content-center h-100">
+                        <div class="avatar-md mx-auto">
+                            <img class="img-fluid rounded-circle" src="{{jobOffer['profileImg']}}">
+                        </div>
+                        
+                        <h5 class="mt-2"><strong>{{jobOffer['organizationName']}}</strong></h5>                        
+                    </div>
+                </div>
+                <div class="col-6 col-xl-4">
+                    <div class="d-flex flex-column  justify-content-center h-100">
+                        <p class="mb-0">{{jobOffer['postedOn']}}</p>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <a class="btn btn-rounded" href="#">View</a>
+            </div>
+        </div>
+    </div>
+</div>
+

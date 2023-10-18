@@ -1,0 +1,825 @@
+
+<header class="header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="d-flex flex-grow-1 align-items-center justify-content-between">
+                <div >
+                    <div class="d-flex align-items-center justify-content-start">
+                        <ul class="top-nav localization">
+                            <li><a style="cursor: pointer;" (click)="onChangeLanguage('en')">EN</a>-<a style="cursor: pointer;" (click)="onChangeLanguage('fr')">FR</a></li>
+                            <li *ngIf="userService.loggedInUser.type=='company'"><a routerLink="/experts">{{'Experts' | translate}}</a></li>
+                            <li *ngIf="userService.loggedInUser.type=='expert'"><a routerLink="/organizations">{{'Organizations' | translate}}</a></li>
+                            <li *ngIf="userService.isLoggedIn"><a routerLink="/">{{'Travel Map' | translate}}</a></li>
+                            <li *ngIf="userService.isLoggedIn"><a routerLink="/">{{'Events' | translate}}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div >
+                    <div class="d-flex align-items-center justify-content-center ">
+                        <a *ngIf="!userService.isLoggedIn" class="navbar-brand" routerLink="/">{{'Welcome to PANDA' | translate}}</a>
+                        <a *ngIf="userService.isLoggedIn" routerLink="/">
+                          <img src="./../../assets/images/panda-logo.png">
+                        </a>
+                    </div>
+                </div>
+                <div  [ngClass]="{'no-submenu': currentURL==='/'}">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <ul class="top-nav mbl-hide d-xl-flex" [ngClass]="{'show-mbl-menu':sharedService.toggleMbl}">
+                          <li *ngIf="userService.isLoggedIn then loggedIn; else logout;"></li>
+                          <ng-template #loggedIn>
+                            <li style="cursor: pointer;" *ngIf="userService.loggedInUser.type=='expert'" (click)="expertNoti=true">{{'Notifications' | translate}}</li>
+                            <li style="cursor: pointer;" *ngIf="userService.loggedInUser.type=='company'" (click)="companyNoti=true">{{'Notifications' | translate}}</li>
+
+                            <li style="cursor: pointer;" *ngIf="userService.loggedInUser.type=='expert'" routerLink="/expert-profile">{{'My Profile' | translate}}</li>
+                            <li style="cursor: pointer;" *ngIf="userService.loggedInUser.type=='company'" routerLink="/organization-profile">{{'My Profile' | translate}}</li>
+                            <li style="cursor: pointer;" (click)="onLogout()">{{'Logout' | translate}}</li>
+                          </ng-template>
+                          <ng-template #logout>
+                            <li *ngIf="!userService.isLoggedIn"><a routerLink="/account/register">{{'Join PANDA for Free' | translate}} </a></li>
+                            <li *ngIf="!userService.isLoggedIn"><a routerLink="/account">{{'Sign in' | translate}}</a></li>
+                          </ng-template>
+                        </ul>
+
+                        <button class="navbar-toggler" type="button" aria-label="Toggle navigation" (click)="sharedService.toggleMbl = !sharedService.toggleMbl">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="page-content" [ngClass]="{'no-padd': (currentURL==='/organization-profile' || currentURL==='/expert-profile')}">
+        <router-outlet></router-outlet>
+    </div>
+
+  <!-- Expert Notification Modal -->
+  <div id="myModal" class="modal page-m fade" role="dialog" [ngClass]="{'openJob': expertNoti}">
+    <div class="overlay"></div>
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header top-b d-flex justify-content-between">
+          <div class="d-flex left-toggles">
+            <p class="close">
+              ACTIVE ALL
+            </p>
+            <p class="close">
+              DISABLE ALL
+            </p>
+          </div>
+
+          <p class="close" data-dismiss="modal" (click)="companyNoti=false">CLOSE</p>
+        </div>
+        <div class="modal-body">
+          <!-- Favourite Orgnization -->
+          <div class="types-notis">
+            <div class="top-t d-flex">
+              <img src="./../../../assets/images/union.png">
+              <p class="ttl">
+                Notifications <span>-  My Favorite Organizations</span>
+              </p>
+            </div>
+            <div class="table-notis">
+              <div class="header t-div border-b">
+                <div class="org-name">
+                  <p>Organization name</p>
+                </div>
+                <div class="org-sec">
+                  <p>Sector</p>
+                </div>
+                <div class="org-action">
+                  <p>Action</p>
+                </div>
+                <div class="org-status">
+                  <p>Status</p>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>Mercedes</h4>
+                </div>
+                <div class="org-sec">
+                  <p>Technologies, Marketing</p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/sls.png">
+                  <h4>SLS</h4>
+                </div>
+                <div class="org-sec">
+                  <p>Technologies, Marketing</p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/moldin.png">
+                  <h4>MOLDINDCONBANK</h4>
+                </div>
+                <div class="org-sec">
+                  <p>Technologies, Marketing</p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Travel Map -->
+          <div class="types-notis">
+            <div class="top-t d-flex">
+              <img src="./../../../assets/images/union.png">
+              <p class="ttl">
+                Notifications <span>— My Travel Map </span>
+              </p>
+            </div>
+            <div class="table-notis t-five">
+              <div class="header t-div border-b">
+                <div class="org-name">
+                  <p>Name</p>
+                </div>
+                <div class="org-sec">
+                  <p>Job Title</p>
+                </div>
+                <div class="org-action-t">
+                  <p>Travels</p>
+                </div>
+                <div class="org-action">
+                  <p>Action</p>
+                </div>
+                <div class="org-status">
+                  <p>Status</p>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>Artur Pirajkov</h4>
+                </div>
+                <div class="org-sec">
+                  <p>Web Designer</p>
+                </div>
+                <div class="org-action-t">
+                  <p>
+                    <span>22-07-2022 —  30-08-2022</span>
+                    <span>Senegal</span>
+                  </p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Favourite Jobs -->
+          <div class="types-notis">
+            <div class="top-t d-flex">
+              <img src="./../../../assets/images/union.png">
+              <p class="ttl">
+                Notifications <span>- My Favorite Job Offers</span>
+              </p>
+            </div>
+            <div class="table-notis">
+              <div class="header t-div border-b">
+                <div class="org-name">
+                  <p>Organization name</p>
+                </div>
+                <div class="org-sec">
+                  <p>Job Title</p>
+                </div>
+                <div class="org-action">
+                  <p>Action</p>
+                </div>
+                <div class="org-status">
+                  <p>Status</p>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>Mercedes</h4>
+                </div>
+                <div class="org-sec">
+                  <p>Team Lead</p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/sls.png">
+                  <h4>Dulcinella</h4>
+                </div>
+                <div class="org-sec">
+                  <p>Web Developer</p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Favourite Events -->
+          <div class="types-notis">
+            <div class="top-t d-flex">
+              <img src="./../../../assets/images/union.png">
+              <p class="ttl">
+                Notifications <span>— My Favorite Events</span>
+              </p>
+            </div>
+            <div class="table-notis t-five">
+              <div class="header t-div border-b">
+                <div class="org-name">
+                  <p>Posted by</p>
+                </div>
+                <div class="org-sec">
+                  <p>Event title</p>
+                </div>
+                <div class="org-action-t">
+                  <p>Event date</p>
+                </div>
+                <div class="org-action">
+                  <p>Action</p>
+                </div>
+                <div class="org-status">
+                  <p>Status</p>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>Paulina Daunescu</h4>
+                </div>
+                <div class="org-sec">
+                  <p>Nancys Party</p>
+                </div>
+                <div class="org-action-t">
+                  <p>
+                    <span>22-07-2022 —  30-08-2022</span>
+                    <span>Senegal</span>
+                  </p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>Dulcinella</h4>
+                </div>
+                <div class="org-sec">
+                  <p>Love HTP</p>
+                </div>
+                <div class="org-action-t">
+                  <p>
+                    <span>22-07-2022 —  30-08-2022</span>
+                    <span>Senegal</span>
+                  </p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Event Filters -->
+          <div class="types-notis">
+            <div class="top-t d-flex">
+              <img src="./../../../assets/images/union.png">
+              <p class="ttl">
+                Notifications <span>— Event Filters</span>
+              </p>
+            </div>
+            <div class="table-notis t-five">
+              <div class="header t-div border-b">
+                <div class="org-name">
+                  <p>Name</p>
+                </div>
+                <div class="org-sec">
+                  <p>Posted by</p>
+                </div>
+                <div class="org-action-t">
+                  <p>Date</p>
+                </div>
+                <div class="org-action">
+                  <p>Action</p>
+                </div>
+                <div class="org-status">
+                  <p>Status</p>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>NEW EVENTS — Filter nr 1</h4>
+                </div>
+                <div class="org-sec">
+                  <p>All</p>
+                </div>
+                <div class="org-action-t">
+                  <p>
+                    <span>22-07-2022 —  30-08-2022</span>
+                    <span>Senegal</span>
+                  </p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>NEW EVENTS — filter nr 2</h4>
+                </div>
+                <div class="org-sec">
+                  <p>African Companies</p>
+                </div>
+                <div class="org-action-t">
+                  <p>
+                    <span>22-07-2022 —  30-08-2022</span>
+                    <span>Senegal</span>
+                  </p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Remove all</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Company Notification Modal -->
+  <div id="myModal" class="modal page-m fade" role="dialog" [ngClass]="{'openJob': companyNoti}">
+    <div class="overlay"></div>
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header top-b d-flex justify-content-between">
+          <div class="d-flex left-toggles">
+            <p class="close">
+              ACTIVE ALL
+            </p>
+            <p class="close">
+              DISABLE ALL
+            </p>
+          </div>
+
+          <p class="close" data-dismiss="modal" (click)="companyNoti=false">CLOSE</p>
+        </div>
+        <div class="modal-body">
+          <!-- Favourite Orgnization -->
+          <div class="types-notis">
+            <div class="top-t d-flex">
+              <img src="./../../../assets/images/union.png">
+              <p class="ttl">
+                Notifications <span>—  My Favorite Experts </span>
+              </p>
+            </div>
+            <div class="table-notis">
+              <div class="header t-div border-b">
+                <div class="org-name">
+                  <p>Name</p>
+                </div>
+                <div class="org-sec">
+                  <p>Job Title</p>
+                </div>
+                <div class="org-action">
+                  <p>Action</p>
+                </div>
+                <div class="org-status">
+                  <p>Status</p>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>PABLO DIHUNO  </h4>
+                </div>
+                <div class="org-sec">
+                  <p>Web Designer</p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/sls.png">
+                  <h4>Maria Loscanu</h4>
+                </div>
+                <div class="org-sec">
+                  <p>Web Designer</p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Travel Map -->
+          <div class="types-notis">
+            <div class="top-t d-flex">
+              <img src="./../../../assets/images/union.png">
+              <p class="ttl">
+                Notifications <span>— My Travel Map </span>
+              </p>
+            </div>
+            <div class="table-notis t-five">
+              <div class="header t-div border-b">
+                <div class="org-name">
+                  <p>Name</p>
+                </div>
+                <div class="org-sec">
+                  <p>Job Title</p>
+                </div>
+                <div class="org-action-t">
+                  <p>Travels</p>
+                </div>
+                <div class="org-action">
+                  <p>Action</p>
+                </div>
+                <div class="org-status">
+                  <p>Status</p>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>Artur Pirajkov</h4>
+                </div>
+                <div class="org-sec">
+                  <p>Web Designer</p>
+                </div>
+                <div class="org-action-t">
+                  <p>
+                    <span>22-07-2022 —  30-08-2022</span>
+                    <span>Senegal</span>
+                  </p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Favourite Events -->
+          <div class="types-notis">
+            <div class="top-t d-flex">
+              <img src="./../../../assets/images/union.png">
+              <p class="ttl">
+                Notifications <span>— My Favorite Events</span>
+              </p>
+            </div>
+            <div class="table-notis t-five">
+              <div class="header t-div border-b">
+                <div class="org-name">
+                  <p>Posted by</p>
+                </div>
+                <div class="org-sec">
+                  <p>Event title</p>
+                </div>
+                <div class="org-action-t">
+                  <p>Event date</p>
+                </div>
+                <div class="org-action">
+                  <p>Action</p>
+                </div>
+                <div class="org-status">
+                  <p>Status</p>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>Paulina Daunescu</h4>
+                </div>
+                <div class="org-sec">
+                  <p>Nancys Party</p>
+                </div>
+                <div class="org-action-t">
+                  <p>
+                    <span>22-07-2022 —  30-08-2022</span>
+                    <span>Senegal</span>
+                  </p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>Dulcinella</h4>
+                </div>
+                <div class="org-sec">
+                  <p>Love HTP</p>
+                </div>
+                <div class="org-action-t">
+                  <p>
+                    <span>22-07-2022 —  30-08-2022</span>
+                    <span>Senegal</span>
+                  </p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Event Filters -->
+          <div class="types-notis">
+            <div class="top-t d-flex">
+              <img src="./../../../assets/images/union.png">
+              <p class="ttl">
+                Notifications <span>— Event Filters</span>
+              </p>
+            </div>
+            <div class="table-notis t-five">
+              <div class="header t-div border-b">
+                <div class="org-name">
+                  <p>Name</p>
+                </div>
+                <div class="org-sec">
+                  <p>Posted by</p>
+                </div>
+                <div class="org-action-t">
+                  <p>Date</p>
+                </div>
+                <div class="org-action">
+                  <p>Action</p>
+                </div>
+                <div class="org-status">
+                  <p>Status</p>
+                </div>
+              </div>
+
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>NEW EVENTS — Filter nr 1</h4>
+                </div>
+                <div class="org-sec">
+                  <p>All</p>
+                </div>
+                <div class="org-action-t">
+                  <p>
+                    <span>22-07-2022 —  30-08-2022</span>
+                    <span>Senegal</span>
+                  </p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+              <div class="d-div t-div border-b">
+                <div class="org-name">
+                  <img src="../../assets/images/mercedes.png">
+                  <h4>NEW EVENTS — filter nr 2</h4>
+                </div>
+                <div class="org-sec">
+                  <p>African Companies</p>
+                </div>
+                <div class="org-action-t">
+                  <p>
+                    <span>22-07-2022 —  30-08-2022</span>
+                    <span>Senegal</span>
+                  </p>
+                </div>
+                <div class="org-action">
+                  <p>Remove</p>
+                </div>
+                <div class="org-status">
+                  <mat-slide-toggle></mat-slide-toggle>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Remove all</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<footer>
+    <div class="footer-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-9">
+                    <h2 class="text-center">Join our community to grow your professional network, explore job opportunities, and hire top talents.</h2>
+                    <div class="d-none d-xl-flex gap-3 justify-content-center" *ngIf="!userService.isLoggedIn">
+                        <a class="btn btn-rounded" routerLink="/account">Sign in</a>
+                        <a class="btn btn-rounded" routerLink="/account/register">Create an account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-widgets">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <h6>Main page</h6>
+                    <ul>
+                        <li>
+                            <a href="#">PANDA’s missions</a>
+                        </li>
+                        <li>
+                            <a href="#">Features</a>
+                        </li>
+                        <li>
+                            <a href="#">Discover the experts</a>
+                        </li>
+                        <li>
+                            <a routerLink="/organizations">Discover organizations in Africa</a>
+                        </li>
+                        <li>
+                            <a routerLink="/organizations">Job offers</a>
+                        </li>
+                        <li>
+                            <a href="#">Upcoming events</a>
+                        </li>
+                        <li>
+                            <a href="#">Testimonials</a>
+                        </li>
+                        <li>
+                            <a href="#">The founders</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6>FOR EXPERTS</h6>
+                    <ul>
+                        <li>
+                            <a routerLink="/organizations">Discover organizations in Africa</a>
+                        </li>
+                        <li>
+                            <a routerLink="/organizations">Job offers</a>
+                        </li>
+                        <li>
+                            <a href="#">Travel Map</a>
+                        </li>
+                        <li>
+                            <a href="#">Upcoming events</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6>FOR African companies</h6>
+                    <ul>
+                        <li>
+                            <a routerLink="/experts">Discover the experts</a>
+                        </li>
+                        <li>
+                            <a href="#">Travel Map</a>
+                        </li>
+                        <li>
+                            <a href="#">Upcoming events</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6>Contact </h6>
+                    <ul>
+                        <li>
+                            <a href="/contact-us">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-4 d-flex align-items-center justify-content-start">
+                    <a class="brand" routerLink="/">PANDA</a>
+                </div>
+                <div class="col-4 d-none d-xl-flex align-items-center justify-content-center">
+                    <p class="copyright">© 2022 All Rights Reserved </p>
+                </div>
+                <div class="col-4 d-flex align-items-center justify-content-end">
+                    <ul class="social-links">
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row d-flex d-xl-none align-items-center justify-content-between">
+                <div class="col-xl-12">
+                    <p class="copyright mt-4">© 2022 All Rights Reserved </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</footer>

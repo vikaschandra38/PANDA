@@ -1,0 +1,1033 @@
+<div class="content-container home">
+  <!-- Page links -->
+  <div class="col-lg-12 col-sm-12 col-md-12 navbar-home" [ngClass]="{'show-mbl-menu':sharedService.toggleMbl}">
+    <ul class="navbar-container">
+
+      <li class="nav-item mb-only">
+        <a routerLink="/account/register/2">Create an account</a>
+      </li>
+      <li class="nav-item mb-only">
+        <a routerLink="/account">Sign in</a>
+      </li>
+      <li class="nav-item mb-only">
+        <img src="./../../../assets/images/union-colored.png">
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="javascript: void(0);" (click)="scrollToSection('mission')">PANDA's </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript: void(0);" (click)="scrollToSection('features')">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript: void(0);" (click)="scrollToSection('experts')">Experts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript: void(0);" (click)="scrollToSection('organizations')">Organizations in
+          Africa</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript: void(0);" (click)="scrollToSection('jobOffers')">Job Offers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript: void(0);" (click)="scrollToSection('events')">Upcoming Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript: void(0);" (click)="scrollToSection('testimonials')">Testimonials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript: void(0);" (click)="scrollToSection('founders')">Founders</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-sm-12 col-lg-12 col-md-12 head">
+    <h1>We connect leading Experts worldwide with Organizations in Africa to create and leverage great opportunties</h1>
+  </div>
+  <!-- Banner -->
+  <div class="col-sm-12 col-md-12 col-lg-12 banner d-flex">
+    <div class="col-sm-3 text-div" (mouseover)="activeImg='left'" [ngClass]="{'faded': activeImg==='right'}">
+      <h3>Organisations in Africa</h3>
+      <p>
+        Are you a Public or Private Company, Institution, Start-up or Organization having a tough time sourcing for top
+        talents?</p>
+
+      <p> Or are you specifically seeking Experts who can bring knowlegde and expertise gained from other climes to move
+        your
+        organization forward?
+      </p>
+      <p>Here’s a way out!</p>
+
+      <p> PANDA opens you up to a pool of African and International Experts possessing a wide-range of technical and
+        soft skills.
+      </p>
+    </div>
+    <div class="col-sm-6 img-div">
+      <div class="image-cont">
+        <img [ngClass]="{'active': activeImg==='left', 'disable': activeImg==='right'}"
+          src="./../../assets/images/home/empty-floor-front-modern-building 1.png" class="right-img oval-img">
+        <img [ngClass]="{'active': activeImg==='right', 'disable': activeImg==='left'}"
+          src="./../../assets/images/home/empty-floor-front-modern-building 1.png" class="left-img oval-img">
+      </div>
+    </div>
+    <div class="col-sm-3 text-div" (mouseover)="activeImg='right'" [ngClass]="{'faded': activeImg==='left'}">
+      <h3>Experts</h3>
+      <p>Are you an African or International Expert looking to relocate and work or share your expertise with
+        Organizations in
+        Africa?</p>
+
+      <p>Or do you travel on the Continent often and wish to link up with Africa-based Organizations or other Experts?
+      </p>
+
+      <p>Or you just want to connect without travelling?</p>
+
+      <p>PANDA is your one stop platform for your networking needs.</p>
+    </div>
+  </div>
+
+  <!-- COMPLETED -->
+  <section id="mission" class="section-mission">
+    <div class="container-fluid">
+      <h1 class="section-title">PANDA's Missions</h1>
+
+      <div class="row align-items-stretch justify-content-between gx-xl-1">
+        <div class="col-6 col-xl">
+          <div class="card text-center">
+            <div class="card-body border-red">
+              <h5 class="mb-3 mb-xl-5">01</h5>
+              <h2 class="mb-2 mb-xl-4">Networking</h2>
+              <p>Link Africa-based Organizations with African and International Experts while serving as a hub for
+                Experts to connect with other Experts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-xl">
+          <div class="card text-center">
+            <div class="card-body border-red">
+              <h5 class="mb-3 mb-xl-5">02</h5>
+              <h2 class="mb-2 mb-xl-4">Sharing </h2>
+              <p>Promote a two-way value exchange (expertise and opportunities) between Africa-based Organizations and
+                Experts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-xl">
+          <div class="card text-center">
+            <div class="card-body border-red">
+              <h5 class="mb-3 mb-xl-5">03</h5>
+              <h2 class="mb-2 mb-xl-4">Recruitment</h2>
+              <p>Facilitate smooth recruitment and employment opportunity search for Africa-based Organizations,
+                International and African experts by increasing the visibility of job offers on the Continent.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-xl">
+          <div class="card text-center">
+            <div class="card-body border-red">
+              <h5 class="mb-3 mb-xl-5">04</h5>
+              <h2 class="mb-2 mb-xl-4">Collaboration </h2>
+              <p>Aid collaboration opportunities in Africa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-xl">
+          <div class="card text-center">
+            <div class="card-body border-red">
+              <h5 class="mb-3 mb-xl-5">05</h5>
+              <h2 class="mb-2 mb-xl-4">Promotion </h2>
+              <p>Create awareness for “Business in Africa” events.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- COMPLETED -->
+  <section id="features" class="section-features">
+    <div class="container-fluid">
+      <h1 class="section-title">Features</h1>
+      <div class="row align-items-stretch justify-content-between">
+        <div class="col-xl-7">
+          <div class="row">
+            <div class="col-6 col-xl-4">
+              <div class="card rounded-top text-center">
+                <div class="card-body border-black">
+                  <div class="overlay border-red"></div>
+                  <div class="text-center">
+                    <img class="mb-2 mb-xl-3" src="../../../assets/images/union.png">
+                    <h4 class="text-uppercase mb-2 mb-xl-4">PROFILE DISCOVERY</h4>
+                    <p> Access the profiles and get in touch with Organizations in Africa or African and International
+                      Experts that aligns with your interest!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-xl-4">
+              <div class="card rounded-top text-center">
+                <div class="card-body border-black">
+                  <div class="overlay border-red"></div>
+                  <img class="mb-2 mb-xl-3" src="../../../assets/images/union.png">
+                  <h4 class="text-uppercase mb-2 mb-xl-4">PUBLICATION</h4>
+                  <p>JPut your Organization’s job offers, events and announcements in front of a qualified audience.
+                    Experts can also attract publicity to their events and trawl through job offers within Africa.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-xl-4">
+              <div class="card rounded-top text-center">
+                <div class="card-body border-black">
+                  <div class="overlay border-red"></div>
+                  <img class="mb-2 mb-xl-3" src="../../../assets/images/union.png">
+                  <h4 class="text-uppercase mb-2 mb-xl-4">TRAVEL MAP</h4>
+                  <p>Network easily by notifying Organizations and other Experts in Africa of your travel itinerary on
+                    the Continent.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-xl-4">
+              <div class="card rounded-bottom text-center">
+                <div class="card-body border-black">
+                  <div class="overlay border-red"></div>
+                  <img class="mb-2 mb-xl-3" src="../../../assets/images/union.png">
+                  <h4 class="text-uppercase mb-2 mb-xl-4">EXTENDED FILTERS & SEARCH</h4>
+                  <p>Narrow down and discover search results that match your search intent fast by filtering based on
+                    criteria like activity, country and more.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-xl-4">
+              <div class="card rounded-bottom text-center">
+                <div class="card-body border-black">
+                  <div class="overlay border-red"></div>
+                  <img class="mb-2 mb-xl-3" src="../../../assets/images/union.png">
+                  <h4 class="text-uppercase mb-2 mb-xl-4">NOTIFICATIONS</h4>
+                  <p>Get real-time alerts on job offers, events, travel schedule, and other publications from your
+                    favourite profiles! </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5">
+          <div class="float-xl-end py-4 mt-4 mt-xl-0 pt-xl-0 h-100">
+            <div class="d-flex flex-column align-items-center justify-content-between h-100">
+              <img class="img-fluid rounded-circle mb-2 mb-xl-4" src="../../../assets/images/home/map.png">
+
+              <span class="shadow mb-2 mb-xl-4"></span>
+
+              <div class="mt-4">
+                <a class="btn btn-rounded" href="#">Explore the Travel Map</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Discover Organization -->
+  <div class="col-sm-12 col-md-12 col-lg-12 sec-b d-flex" id="organizations">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 d-flex scont">
+        <div class="col-sm-4 col-md-4 col-lg-4 left-c">
+          <h4 class="mbl-only">See what other experts are saying:</h4>
+          <div class="tp">
+            <div class="bann d-flex">
+              <p class="prog slide --{{startIndex}} ---{{ind}}" [ngClass]="{'active': startIndex >= ind}"
+                *ngFor="let i of arr; let ind=index"></p>
+            </div>
+            <h3>Discover Organizations
+              in Africa</h3>
+          </div>
+          <div class="btm">
+            <p>Connect with Organizations in Africa, apply for your dream job on the continent or share your expertise
+              even remotely...
+              While discovering happenings and events around “Businesses in Africa”.</p>
+            <button class="btn btn-rounded view-all mbl-only" routerLink="/organizations">Find Organizations in
+              Africa</button>
+          </div>
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-8 right-c">
+          <div class="titles">
+            <h4>
+              <strong> See what other experts are saying: </strong> “ {{arr[startIndex].title}} ”
+            </h4>
+            <p>{{arr[startIndex].author}}</p>
+          </div>
+          <div class="img-slides">
+            <img class="slid-img" (click)="select(i)" [ngClass]="{'active': i === arr[startIndex]}"
+              *ngFor="let i of arr | rotate: startIndex; let in=index;" [src]="i.img">
+          </div>
+          <button class="btn btn-rounded view-all mbl-only" routerLink="/organizations">Find Organizations in
+            Africa</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Discover Experts -->
+  <div class="col-sm-12 col-md-12 col-lg-12 sec-b disc-exp d-flex" id="experts">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 d-flex scont">
+
+        <div class="col-sm-8 col-md-8 col-lg-8 right-c">
+          <div class="titles">
+            <h4>
+              <strong>Here’s what organizations in Africa are saying: </strong>“ {{experts[startIndexExp].title}} ”
+            </h4>
+            <p>{{experts[startIndexExp].author}}</p>
+          </div>
+          <div class="img-slides img-dir">
+            <img class="slid-img" (click)="selectExp(i)" [ngClass]="{'active': i === experts[startIndexExp]}"
+              *ngFor="let i of experts | rotate: startIndexExp; let in=index;" [src]="i.img">
+          </div>
+          <button class="btn btn-rounded view-all mbl-only" routerLink="/experts">Find Experts</button>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 left-c">
+          <div class="tp">
+            <div class="bann d-flex">
+              <p class="prog slide --{{startIndexExp}} ---{{ind}}" [ngClass]="{'active': startIndexExp >= ind}"
+                *ngFor="let i of experts; let ind=index"></p>
+            </div>
+            <h3>Discover African and International Experts</h3>
+          </div>
+          <div class="btm">
+            <p>Get qualified experts to see your job offers - unmask profiles of top talents - fish from a pond of
+              African and
+              international experts in countries around the world.</p>
+            <button class="btn btn-rounded view-all" routerLink="/experts">Find Experts</button>
+            <h4 class="mbl-only">See what other experts are saying:</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="travel_map" class="travel-map d-none">
+    <div class="container-fluid">
+      <h1 class="section-title" [ngClass]="{'w-75': !isMobile}">Track the presence of experts in Africa on the Travel
+        Map!</h1>
+    </div>
+    <div class="justify-content-between pb-3" [ngClass]="{'d-flex': !isMobile}">
+      <div class="notify-me" [ngClass]="{'pb-4': isMobile}">
+        Notify me <mat-slide-toggle></mat-slide-toggle>
+      </div>
+      <div [ngStyle]="{'width': !isMobile ? '32%' : 'auto'}">
+        <ul class="d-flex justify-content-between list-unstyled m-0 w-100">
+          <li (click)="picker.open()">
+            <p class="m-0 travel_map_filter" [ngClass]="{'color-red': travelMapFilter.startDate}">
+              <span [ngClass]="{'d-none': (!isMobile && travelMapFilter.startDate)}">Calendar</span>
+              <!-- <svg [ngClass]="{'d-none': travelMapFilter.startDate}" xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none">
+                  <path d="M12.5618 2.20004L6.55142 8.21045L0.541016 2.20004L1.95523 0.785829L6.55142 5.38202L11.1476 0.785827L12.5618 2.20004Z" fill="#1F1F1F"/>
+                </svg> -->
+              <mat-date-range-input [rangePicker]="picker" [ngClass]="{'w-0': !travelMapFilter.startDate}">
+                <input matStartDate placeholder="Start date" [(ngModel)]="travelMapFilter.startDate"
+                  [ngClass]="{'d-none': (isMobile || !travelMapFilter.startDate)}">
+                <input matEndDate placeholder="End date" [(ngModel)]="travelMapFilter.endDate"
+                  [ngClass]="{'d-none': (isMobile || !travelMapFilter.startDate)}">
+              </mat-date-range-input>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-date-range-picker (opened)="streamOpened()" #picker></mat-date-range-picker>
+            </p>
+          </li>
+          <li>
+            <mat-select placeholder="Country" class="travelMapFilterSelect">
+              <mat-option *ngFor="let country of countries" [value]="country.id">
+                {{country.name}}
+              </mat-option>
+            </mat-select>
+          </li>
+          <li>
+            <mat-select placeholder="Sector" class="travelMapFilterSelect">
+              <mat-option *ngFor="let sector of sectors" [value]="sector.id">
+                {{sector.name}}
+              </mat-option>
+            </mat-select>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr class="mt-0 mb-4">
+    <app-travel-map></app-travel-map>
+    <div class="pt-5 text-center">
+      <button class="btn btn-rounded">
+        Save the search
+      </button>
+    </div>
+  </section>
+
+  <!-- <section class="section-experts">
+        <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false" class="carousel-dark">
+            <ng-template ngbSlide>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="d-flex flex-column justify-content-between h-100">
+                                <div class="d-block">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#testimonials-carousel" class="active"></button>
+                                        <button type="button" data-bs-target="#testimonials-carousel"></button>
+                                    </div>
+
+                                    <h1 class="section-title">Discover the experts</h1>
+                                </div>
+
+                                <div class="d-block">
+                                    <p>Connect with African organizations, apply for your dream job in Africa or share your expertise even remotely!</p>
+
+                                    <div class="d-flex mt-5">
+                                        <a class="btn btn-rounded" routerLink="/experts" >View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8">
+                            <div class="d-flex flex-column justify-content-between h-100">
+                                <div class="d-block">
+                                    <h2>“ My dream was to go back to Africa. I applied for the job of web developer published on PANDA and the next month I started working in Dakar! ”</h2>
+                                    <h5 class="strong text-red float-end">OMAR NDIAYE</h5>
+                                </div>
+                                <div class="d-flex align-items-end gap-4">
+                                    <div class="img-lg">
+                                        <img src="../../../assets/images/home/expert-lg.png">
+                                    </div>
+                                    <div class="img-md">
+                                        <img src="../../../assets/images/home/expert-md.png">
+                                    </div>
+                                    <div class="img-sm">
+                                        <img src="../../../assets/images/home/expert-sm.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </section> -->
+
+  <!-- <section class="section-organizations">
+        <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false" class="carousel-dark">
+            <ng-template ngbSlide>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <div class="d-flex flex-column justify-content-between h-100">
+                                <div class="d-block">
+                                    <h2>“PANDA gives us access to the best talents in their field of activity and real prospects for collaboration! ”</h2>
+                                    <h5 class="strong text-red float-start">The Company</h5>
+                                </div>
+                                <div class="d-flex align-items-end gap-4">
+                                    <div class="img-sm">
+                                        <img src="../../../assets/images/home/organization-sm.png">
+                                    </div>
+                                    <div class="img-md">
+                                        <img src="../../../assets/images/home/organization-md.png">
+                                    </div>
+                                    <div class="img-lg">
+                                        <img src="../../../assets/images/home/organization-lg.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4">
+                            <div class="d-flex flex-column justify-content-between h-100">
+                                <div class="d-block">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#testimonials-carousel" class="active"></button>
+                                        <button type="button" data-bs-target="#testimonials-carousel"></button>
+                                    </div>
+                                    <h1 class="section-title">Discover organizations in Africa</h1>
+                                </div>
+
+                                <div class="d-block">
+                                    <p>Find the experts you are looking for, post your job offers and other exclusive content about your Organization!</p>
+                                    <div class="d-flex mt-5">
+                                        <a class="btn btn-rounded" routerLink="/organizations">View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </section> -->
+  <!-- COMPLETED -->
+  <section id="jobOffers" class="section-job-offers">
+    <div class="container-fluid">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-xl-3">
+          <h1 class="section-title">Job Offers</h1>
+
+          <p class="mb-4">
+            Are you an Organization in Africa looking to hire? Post your job offers so qualified African and International Experts within our community can see and apply!
+          </p>
+
+          <p class="mb-4">Or are you an African or International  Expert looking for a job in Africa? Comb through our job lisiting, apply, and land your dream job!
+          </p>
+
+
+          <div class="d-none d-xl-block pt-4">
+            <a class="btn btn-rounded" href="#">Post or Apply for a Job Offer</a>
+          </div>
+        </div>
+        <div class="col-xl-7">
+          <div class="row align-items-stretch justify-content-center">
+            <ng-container *ngFor="let jobOffer of jobOffers; let i = index">
+              <div class="col-6">
+                <app-job-offer-card [jobOffer]="jobOffer"></app-job-offer-card>
+              </div>
+            </ng-container>
+          </div>
+          <div class="row d-xl-none">
+            <div class="col-xl-12">
+              <div class="text-center mt-4">
+                <a class="btn btn-rounded" href="#">Post or Apply for a Job Offer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- COMPLETED -->
+  <section id="events" class="section-events">
+    <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true" data-bs-touch="true">
+      <div class="container-fluid">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container-fluid">
+            <div class="row align-items-stretch justify-content-between">
+              <div class="col-6 col-xl-3">
+                <div class="d-flex flex-column justify-content-between h-100">
+                  <h1 class="section-title">Upcoming events</h1>
+
+                  <h5 class="mb-4"><strong>Posted By: Pablo Diahuno</strong></h5>
+
+                  <div class="avatar-sm mb-4">
+                    <img class="rounded-circle" src="../../../assets/images/home/event-avatar.png">
+                  </div>
+
+                  <p class="mt-4 mb-0 mb-xl-4">Take out your address book! Keep up to date with all upcoming events
+                    around business in Africa organized
+                    in Africa or abroad.</p>
+
+                  <div class="d-none d-xl-block pt-4">
+                    <a class="btn btn-rounded" href="#">Publish or view events</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-xl-8">
+                <div class="row">
+                  <div class="col-xl-6">
+                    <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                      <img class="img-fluid rounded-circle mb-2 mb-xl-4" src="../../../assets/images/home/event.png">
+                      <div class="shadow my-xl-4"></div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+                      <div class="d-block mt-4">
+                        <h5 class="mb-0"><strong>The Event: <span class="text-red">The Nancy party's</span></strong>
+                        </h5>
+                        <h5 class="mb-0"><strong>Date: <span class="text-red">10/07/22</span></strong></h5>
+                        <h5 class="mb-0"><strong>Location: <span class="text-red">Senegal</span></strong></h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row d-xl-none">
+              <div class="col-xl-12">
+                <div class="text-center mt-4 pt-4">
+                  <a class="btn btn-rounded" href="#">Publish or view events</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="container-fluid">
+            <div class="row align-items-stretch justify-content-between">
+              <div class="col-6 col-xl-3">
+                <div class="d-flex flex-column justify-content-between h-100">
+                  <h1 class="section-title">Upcoming events</h1>
+
+                  <h5 class="mb-4"><strong>Posted By: Pablo Diahuno</strong></h5>
+
+                  <div class="avatar-sm mb-4">
+                    <img class="rounded-circle" src="../../../assets/images/home/event-avatar.png">
+                  </div>
+
+                  <p class="mt-4 mb-0 mb-xl-4">Take out your address book! Keep up to date with all upcoming events
+                    around business in Africa organized
+                    in Africa or abroad.</p>
+
+                  <div class="d-none d-xl-block pt-4">
+                    <a class="btn btn-rounded" href="#">Publish or view events</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-xl-8">
+                <div class="row">
+                  <div class="col-xl-6">
+                    <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                      <img class="img-fluid rounded-circle mb-2 mb-xl-4" src="../../../assets/images/home/event.png">
+                      <span class="shadow my-xl-4"></span>
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="d-flex justify-content-center">
+                      <div class="event-details">
+                        <h5 class="mb-0 mt-4"><strong>The Event: <span class="text-red">The Nancy
+                              party's</span></strong>
+                        </h5>
+                        <h5 class="mb-0"><strong>Date: <span class="text-red">10/07/22</span></strong></h5>
+                        <h5 class="mb-0"><strong>Location: <span class="text-red">Senegal</span></strong></h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row d-xl-none">
+              <div class="col-xl-12">
+                <div class="text-center mt-4 pt-4">
+                  <a class="btn btn-rounded" href="#">Publish or view events</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="container-fluid">
+            <div class="row align-items-stretch justify-content-between">
+              <div class="col-6 col-xl-3">
+                <div class="d-flex flex-column justify-content-between h-100">
+                  <h1 class="section-title">Upcoming events</h1>
+
+                  <h5 class="mb-4"><strong>Posted By: Pablo Diahuno</strong></h5>
+
+                  <div class="avatar-sm mb-4">
+                    <img class="rounded-circle" src="../../../assets/images/home/event-avatar.png">
+                  </div>
+
+                  <p class="mt-4 mb-0 mb-xl-4">Take out your address book! Keep up to date with all upcoming events
+                    around business in Africa organized
+                    in Africa or abroad.</p>
+
+                  <div class="d-none d-xl-block pt-4">
+                    <a class="btn btn-rounded" href="#">Publish or view events</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-xl-8">
+                <div class="row">
+                  <div class="col-xl-6">
+                    <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                      <img class="img-fluid rounded-circle mb-2 mb-xl-4" src="../../../assets/images/home/event.png">
+                      <div class="shadow my-xl-4"></div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="d-flex justify-content-center">
+                      <div class="event-details">
+                        <h5 class="mb-0 mt-4"><strong>The Event: <span class="text-red">The Nancy
+                              party's</span></strong>
+                        </h5>
+                        <h5 class="mb-0"><strong>Date: <span class="text-red">10/07/22</span></strong></h5>
+                        <h5 class="mb-0"><strong>Location: <span class="text-red">Senegal</span></strong></h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row d-xl-none">
+              <div class="col-xl-12">
+                <div class="text-center mt-4 pt-4">
+                  <a class="btn btn-rounded" href="#">Publish or view events</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section-announcements">
+    <div class="container-fluid">
+        <h1 class="section-title">The Announcements Corner</h1>
+        <div class="row align-items-stretch justify-content-center">
+            <ng-container *ngFor="let announcement of announcements; let i = index">
+                <div class="col-xl-4">
+                    <app-announcement-card [announcement]="announcement"></app-announcement-card>
+                </div>
+            </ng-container>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            <a class="btn btn-rounded" href="#">Create an announcements</a>
+        </div>
+    </div>
+</section>
+
+  <!-- COMPLETED -->
+  <section id="testimonials" class="section-testimonials">
+    <h1 class="section-title">Here’s more of what people are saying about PANDA</h1>
+
+    <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true"
+      data-bs-touch="true">
+      <div class="container-fluid">
+        <div class="carousel-indicators justify-content-xl-end">
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container-fluid">
+            <div class="row align-items-stretch justify-content-between">
+              <div class="col-xl-8">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="d-flex flex-column justify-content-between h-100">
+                      <div class="mt-xl-4">
+                        <h5 class="mb-0"><strong>Diaspora Member:</strong></h5>
+                        <h5 class="text-red mb-4"><strong>Artur Luison</strong></h5>
+
+                        <h5 class="mb-0"><strong>Job Position:</strong></h5>
+                        <h5 class="text-red mb-4 mb-xl-0"><strong>Manager</strong></h5>
+                      </div>
+                      <div class="d-none d-xl-block">
+                        <p class="mt-4 mb-0 mb-xl-4">“ Risus, sed venenatis sed morbi lectus nunc tincidunt quam. Eget
+                          volutpat elementum cum turpis feugiat imperdiet auctor accumsan. Ut pulvinar orci. “</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                      <img class="img-fluid rounded-circle mb-2 mb-xl-4"
+                        src="../../../assets/images/home/testimonial.png">
+                      <div class="shadow my-xl-4"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row d-block d-xl-none">
+                  <div class="col-12">
+                    <p class="mt-4 mb-2">“ Risus, sed venenatis sed morbi lectus nunc tincidunt quam. Eget volutpat
+                      elementum cum turpis feugiat imperdiet auctor accumsan. Ut pulvinar orci. “</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="d-flex flex-column h-100">
+                  <h4 class="my-4">Very Nice Atmosphere and experience with “Welcome to PANDA”</h4>
+
+                  <p class="mb-4">Risus, sed venenatis sed morbi lectus nunc tincidunt quam. Eget volutpat elementum cum
+                    turpis feugiat imperdiet auctor accumsan. Ut pulvinar orci.</p>
+                  <p>Risus, sed venenatis sed morbi lectus nunc tincidunt quam. Eget volutpat elementum cum turpis
+                    feugiat imperdiet auctor accumsan. Ut pulvinar orci.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="container-fluid">
+            <div class="row align-items-stretch justify-content-between">
+              <div class="col-xl-8">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="d-flex flex-column justify-content-between h-100">
+
+                      <div class="mt-xl-4">
+                        <h5 class="mb-0"><strong>Diaspora Member:</strong></h5>
+                        <h5 class="text-red mb-4"><strong>Artur Luison</strong></h5>
+
+                        <h5 class="mb-0"><strong>Job Position:</strong></h5>
+                        <h5 class="text-red mb-4 mb-xl-0"><strong>Manager</strong></h5>
+                      </div>
+                      <div class="d-none d-xl-block">
+                        <p class="mt-4 mb-0 mb-xl-4">“ Risus, sed venenatis sed morbi lectus nunc tincidunt quam. Eget
+                          volutpat elementum cum turpis feugiat imperdiet auctor accumsan. Ut pulvinar orci. “</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                      <img class="img-fluid rounded-circle mb-2 mb-xl-4"
+                        src="../../../assets/images/home/testimonial.png">
+                      <div class="shadow my-xl-4"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row d-block d-xl-none">
+                  <div class="col-12">
+                    <p class="my-4 mb-2">“ Risus, sed venenatis sed morbi lectus nunc tincidunt quam. Eget volutpat
+                      elementum cum turpis feugiat imperdiet auctor accumsan. Ut pulvinar orci. “</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="d-flex flex-column h-100">
+                  <h4 class="my-4">Very Nice Atmosphere and experience with “Welcome to PANDA”</h4>
+
+                  <p class="mb-4">Risus, sed venenatis sed morbi lectus nunc tincidunt quam. Eget volutpat elementum cum
+                    turpis feugiat imperdiet auctor accumsan. Ut pulvinar orci.</p>
+                  <p>Risus, sed venenatis sed morbi lectus nunc tincidunt quam. Eget volutpat elementum cum turpis
+                    feugiat imperdiet auctor accumsan. Ut pulvinar orci.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="container-fluid">
+            <div class="row align-items-stretch justify-content-between">
+              <div class="col-xl-8">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="d-flex flex-column justify-content-between h-100">
+
+                      <div class="mt-xl-4">
+                        <h5 class="mb-0"><strong>Diaspora Member:</strong></h5>
+                        <h5 class="text-red mb-4"><strong>Artur Luison</strong></h5>
+
+                        <h5 class="mb-0"><strong>Job Position:</strong></h5>
+                        <h5 class="text-red mb-4 mb-xl-0"><strong>Manager</strong></h5>
+                      </div>
+                      <div class="d-none d-xl-block">
+                        <p class="mt-4 mb-0 mb-xl-4">“ Risus, sed venenatis sed morbi lectus nunc tincidunt quam. Eget
+                          volutpat elementum cum turpis feugiat imperdiet auctor accumsan. Ut pulvinar orci. “</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                      <img class="img-fluid rounded-circle mb-2 mb-xl-4"
+                        src="../../../assets/images/home/testimonial.png">
+                      <div class="shadow my-xl-4"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row d-block d-xl-none">
+                  <div class="col-12">
+                    <p class="my-4 mb-2">“ Risus, sed venenatis sed morbi lectus nunc tincidunt quam. Eget volutpat
+                      elementum cum turpis feugiat imperdiet auctor accumsan. Ut pulvinar orci. “</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3">
+                <div class="d-flex flex-column h-100">
+                  <h4 class="my-4">Very Nice Atmosphere and experience with “Welcome to PANDA”</h4>
+
+                  <p class="mb-4">Risus, sed venenatis sed morbi lectus nunc tincidunt quam. Eget volutpat elementum cum
+                    turpis feugiat imperdiet auctor accumsan. Ut pulvinar orci.</p>
+                  <p>Risus, sed venenatis sed morbi lectus nunc tincidunt quam. Eget volutpat elementum cum turpis
+                    feugiat imperdiet auctor accumsan. Ut pulvinar orci.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLETED -->
+  <section id="founders" class="section-founders">
+    <div class="container-fluid">
+      <h1 class="section-title">Meet The Founders of PANDA</h1>
+
+      <div class="row align-items-center justify-content-between">
+        <div class="col-xl-6">
+          <div class="row gx-xl-5">
+            <div class="col-6">
+              <div class="card">
+                <div class="card-body text-center">
+                  <img class="img-fluid" src="../../../assets/images/home/sarah_walu_onya.png">
+                </div>
+                <div class="card-footer d-xl-none">
+                  <h5 class="mb-0"><strong>PANDA co-founder:</strong></h5>
+                  <h5 class="text-red"><strong>Sarah Walu Onya</strong></h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card">
+                <div class="card-body text-center">
+                  <img class="img-fluid" src="../../../assets/images/home/abdoulaye_ba.png">
+                </div>
+                <div class="card-footer d-xl-none">
+                  <h5 class="mb-0"><strong>PANDA co-founder:</strong></h5>
+                  <h5 class="text-red"><strong>Abdoulaye Ba</strong></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 d-none d-xl-flex">
+          <div class="card">
+            <div class="card-body border-black p-0 p-xl-4">
+              <div class="d-flex flex-column mt-4 p-2">
+                <p class="mt-4">“ <span class="text-red">Sarah</span> and <span class="text-red">Abdoulaye</span> are
+                  both consultants and managers in an international strategy and management consulting group. They meet
+                  in Luxembourg and exchanged a lot about their common experience in entrepreneurship. Throughout their
+                  discussions one thing was quite clear: their passion for entrepreneurship and their love of Africa,
+                  the continent they both come from. “</p>
+                <p>They are then convinced that they can meet a critical need in <span class="text-red">Africa</span>
+                  and have a real impact by bringing together leading experts from around the world to <span
+                    class="text-red">collaborate</span> with African actors on projects to grow Africa's innovation
+                  ecosystem.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- For Mobile View -->
+        <div class="col-xl-6 d-xl-none">
+          <div class="row">
+            <div class="col-6">
+              <div class="card">
+                <div class="card-body border-black p-0 p-xl-4">
+                  <div class="d-flex flex-column mt-4 p-2">
+                    <p class="mt-4">“ <span class="text-red">Sarah</span> and <span class="text-red">Abdoulaye</span>
+                      are both consultants and managers in an international strategy and management consulting group.
+                      They meet in Luxembourg and exchanged a lot about their common experience in entrepreneurship.
+                      Throughout their discussions one thing was quite clear: their passion for entrepreneurship</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card">
+                <div class="card-body border-black p-0 p-xl-4">
+                  <div class="d-flex flex-column mt-4 p-2">
+                    <p class="mt-4"> and their love of Africa, the continent they both come from. “ They are then
+                      convinced that they can meet a critical need in <span class="text-red">Africa</span> and have a
+                      real impact by bringing together leading experts from around the world to <span
+                        class="text-red">collaborate</span> with African actors on projects to grow Africa's innovation
+                      ecosystem.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- For Mobile View -->
+      <div class="row justify-content-between d-none d-xl-flex ">
+        <div class="col-xl-6">
+          <div class="row gx-xl-5 ">
+            <div class="col-6">
+              <h5 class="mb-0"><strong>Welcome to PANDA co-founder:</strong></h5>
+              <h5 class="text-red"><strong>Sarah Walu Onya</strong></h5>
+            </div>
+            <div class="col-6">
+              <h5 class="mb-0"><strong>Welcome to PANDA co-founder:</strong></h5>
+              <h5 class="text-red"><strong>Abdoulaye Ba</strong></h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3">
+
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-9">
+          <h2 class="text-center">“ Our goal is to capture and share knowledge, expertise and networks to create
+            limitless opportunities whether for African players looking for top talent to grow their business or for
+            experts around the world who want to start innovative projects in Africa. “</h2>
+          <h5 class="text-red text-center text-xl-end"><strong>Sarah and Abdoulaye</strong></h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="col-sm-12 col-md-12 col-lg-12 sec-c d-flex">
+    <div class="col-sm-12 col-md-12 col-lg-12 d-flex icont">
+      <div class="col-sm-6 col-md-6 col-lg-6 left-c">
+        <h3>Top 5 growing businesses in Africa</h3>
+        <div class="img-cntr">
+          <ng-container *ngFor="let i of businessArr; let ind=index">
+            <img [src]="i.img" *ngIf="activeB == ind">
+          </ng-container>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-4 col-lg-4 right-c">
+        <div class="bann d-flex">
+          <p class="prog slide --{{startIndex}} ---{{ind}}" [ngClass]="{'active': activeB >= ind}"
+            *ngFor="let i of businessArr; let ind=index"></p>
+        </div>
+        <div class="slist">
+          <ul>
+            <li *ngFor="let b of businessArr; let l=index;" (click)="selectBusiness(l)"
+              [ngClass]="{'active': activeB == l}">
+              <img src="./../../assets/images/union.png">
+              {{b.title}}
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-rounded view-all" (click)="selectBusiness(businessArr.length - 1 === activeB ? 0 : activeB + 1)">Next</button>
+      </div>
+    </div>
+  </div>
+  <!-- <section class="section-businesses">
+        <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false" class="carousel-dark">
+            <ng-template ngbSlide>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-8">
+                            <h1 class="section-title">Top 5 growing businesses in Africa</h1>
+
+                            <div class="d-flex ms-5">
+                                <img class="img-fluid rounded-circle" src="../../../assets/images/home/agri.png">
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#testimonials-carousel" class="active"></button>
+                                <button type="button" data-bs-target="#testimonials-carousel" ></button>
+                            </div>
+
+                            <h2 class="bg-asterisk">Renewable energy</h2>
+                            <h2 class="bg-asterisk">Agri-food</h2>
+                            <h2 class="bg-asterisk">Technology</h2>
+                            <h2 class="bg-asterisk">E-commerce</h2>
+                            <h2 class="bg-asterisk">Payment solutions</h2>
+
+                            <div class="d-flex mt-5">
+                                <a class="btn btn-rounded" href="#">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+
+    </section> -->
+</div>

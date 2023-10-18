@@ -1,0 +1,126 @@
+<!-- Register new -->
+<ng-container *ngIf="registration">
+  <div class="d-block mb-auto"  id="register">
+    <div class="card rounded-top text-center">
+      <div class="card-body bordered">
+        <img src="../../../assets/images/union.png">
+
+        <h3>Create your free account</h3>
+        <h4>
+          Takes less than
+          <span class="text-colored">5 minutes...</span>
+        </h4>
+        <form class="form-container" [formGroup]="signupForm">
+          <div class="relative mb-5">
+            <input placeholder="Enter your email address" type="email" name="email" class="" formControlName="email"/>
+            <p class="email-error" *ngIf="emailExist">This email address already exists. <a routerLink="/account">Sign in</a></p>
+            <div class="md-errors-spacer"  *ngIf="signupForm.get('email').invalid && isSubmit">
+              <div class="required-f" *ngIf="signupForm.get('email').hasError('required') && isSubmit">
+                Email is required
+              </div>
+              <div class="required-f" *ngIf="isSubmit && signupForm.get('email').errors['pattern']">
+                Email is invalid
+              </div>
+            </div>
+          </div>
+
+          <div class="w-100 mb-5">
+            <div class="input-group mb-1 d-flex flex-nowrap">
+              <input formControlName="password" placeholder="Enter your preferred password" [type]="viewPass ? 'text' : 'password'" name="pass" class=""/>
+             
+              <span class="input-group-text bg-transparent border-0 show-p" id="basic-addon2" (click)="viewPass = !viewPass">{{viewPass ? 'Hide' : 'Show'}}</span>
+            </div>
+            <div class="md-errors-spacer" *ngIf="isSubmit && signupForm.get('password').invalid">
+              <div class="required-f" *ngIf="signupForm.get('password').hasError('required')">
+                Password is required
+              </div>
+              <div class="required-f" *ngIf="signupForm.get('password').hasError('pattern')">
+                Password must contain atleast a number, uppercase, lowercase.
+              </div>
+            </div>
+          </div>
+
+          <div class="w-100 mb-3">
+            <div class="input-group mb-1 d-flex flex-nowrap">
+              <input formControlName="confirmPassword" placeholder=" Re-enter your preferred password " [type]="viewCPass ? 'text' : 'password'" name="cp" class="" />
+             
+              <span class="input-group-text bg-transparent border-0 show-p" id="basic-addon2" (click)="viewCPass = !viewCPass">{{viewCPass ? 'Hide' : 'Show'}}</span>
+            </div>
+            <div class="md-errors-spacer" *ngIf="isSubmit && signupForm.get('confirmPassword').invalid">
+              <div  class="required-f"*ngIf="signupForm.get('confirmPassword').hasError('required')">
+                Required
+              </div>
+              <div class="required-f" *ngIf="signupForm.get('confirmPassword').hasError('confirm')">{{'Password is inconsistent!' }}</div>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+
+    <div class="form-bottom">
+      <h5>Which best describes you?</h5>
+      <div class="relative ">
+        <label class="container check-container">I’m an Expert
+          <input type="checkbox" checked="checked" [(ngModel)]="registerUser.expert" (change)="registerUser.organization = false">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="relative ">
+        <label class="container check-container">We’re an Organization in Africa
+          <input type="checkbox" [(ngModel)]="registerUser.organization" (change)="registerUser.expert = false">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <button class="btn btn-rounded" (click)="register()">Join PANDA</button>
+      <p class="tnc">
+        By clicking on "Join PANDA", you agree to our <a href="">terms of use</a> and <a href="">privacy policy</a>
+      </p>
+    </div>
+  </div>
+</ng-container>
+
+<!-- Verify Account -->
+<ng-container *ngIf="verificationLinkSent">
+    <div class="d-block mb-auto">
+        <div class="card rounded-top text-center">
+            <div class="card-body bordered" style="border: 1px solid #E0E0E0; border-radius: 250px 250px 0px 0px;">
+                <img src="../../../assets/images/union.png">
+                <h3 class="mb-3">
+                  You’re almost in...
+                  </h3>
+                <h3>Log in to your email and click on the confirmation link</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column justify-content-center">
+        <p class="text-center mb-0">Didn't receive the link?</p>
+        <a class="text-center" href="javascript: void(0);" (click)="sendLink()">Resend the link</a>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="confirmedRegistration">
+    <div class="d-block">
+        <div class="card rounded-top text-center">
+            <div class="card-body bordered">
+                <img src="../../../assets/images/union.png">
+
+                <h3 class="d-flex flex-column"><span class="mb-3">Congratulations...
+                  You’re in!</span>
+                  
+                  <span style="color: #A95454;">What’s Next?</span>
+                  
+                 <span class="mt-3"> Click the button below to sign in, complete your profile and start networking</span></h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center mt-5">
+        <button class="btn btn-rounded">Sign in</button>
+    </div>
+</ng-container>
+
+
+
+

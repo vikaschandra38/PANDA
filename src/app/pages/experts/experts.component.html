@@ -1,0 +1,151 @@
+<div class="content-container experts">
+    <section class="section-hero">
+        <div class="cover">
+            <h1 class="section-title">My Network Space</h1>
+        </div>
+    </section>
+
+    <section class="section-intro text-center">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-11">
+                    <h1 class="section-title"> Connect to share your expertise, find job opportunities, and notify Organizations in Africa or other Experts of your presence on the Continent!</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-organizations">
+        <div class="container-fluid">
+            <h1 class="section-title"> Discover Organizations In Africa </h1>
+
+            <div class="row organization-list align-items-stretch justify-content-center">
+                <ng-container *ngFor="let organization of organizations; let i = index">
+                    <div class="col-6 col-xl-4">
+                        <app-organization-card [organization]="organization"></app-organization-card>
+                    </div>
+                </ng-container>
+                <div class="paginations">
+                  <p *ngFor='let in of totalPages ;let i = index' [ngClass]="{'active': companyPage===i+1}" (click)="changePage(companyPage)">{{i+1}}</p>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <!-- <p class="btn btn-rounded" *ngIf="companyPage > 1" (click)="changePage(this.companyPage, 'prev')">Prev Page</p>
+                <p class="btn btn-rounded" *ngIf="companyPage < totalCompany" (click)="changePage(this.companyPage, 'next')">Next Page</p> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section-job-offers">
+        <div class="container-fluid">
+            <h1 class="section-title">See Available Job Offers & apply</h1>
+            <div class="row align-items-stretch justify-content-center">
+                <ng-container *ngFor="let jobOffer of jobOffers; let i = index">
+                    <div class="col-6">
+                        <app-job-offer-card [jobOffer]="jobOffer"></app-job-offer-card>
+                    </div>
+                </ng-container>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <a class="btn btn-rounded" href="#">Next Page</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-travel-map">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10 col-lg-11">
+                    <h1 class="section-title">Notify Organizations and other Experts of your presence in Africa on the Travel Map and network!</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <a class="btn btn-rounded" href="#">Save the search</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-events">
+        <div class="container-fluid">
+            <h1 class="section-title">Upcoming events</h1>
+
+            <div class="row event-list align-items-stretch justify-content-center">
+                <ng-container *ngFor="let event of events; let i = index">
+                    <div class="col-xl-6">
+                        <app-event-card [event]="event"></app-event-card>
+                    </div>
+                </ng-container>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <a class="btn btn-rounded" href="#">Next Page</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-announcements">
+      <div class="container-fluid">
+          <h1 class="section-title">The Announcements Corner</h1>
+          <div class="row align-items-stretch justify-content-center">
+              <ng-container *ngFor="let announcement of announcements; let i = index">
+                  <div class="col-xl-4">
+                      <app-announcement-card [announcement]="announcement"></app-announcement-card>
+                  </div>
+              </ng-container>
+          </div>
+
+          <div class="d-flex justify-content-center mt-5">
+              <a class="btn btn-rounded" href="#">Next Page</a>
+          </div>
+      </div>
+  </section>
+
+    <section class="section-notifications">
+        <div class="container-fluid">
+            <div class="row gx-xl-5 align-items-stretch justify-content-center">
+                <div class="col-6 col-xl-8">
+                    <div class="cover"></div>
+                </div>
+                <div class="col-6 col-xl-4">
+                    <div class="d-flex align-items-end justify-content-center h-100">
+                        <div class="card text-center">
+                            <div class="card-body border-black">
+                                <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                                    <div class="d-block">
+                                        <img src="../../../assets/images/union.png">
+                                        <h1>Notifications</h1>
+                                    </div>
+
+                                    <p class="mb-4">
+                                      Get real-time alerts from favourite Expert profiles, their updates on the Travel Map, and upcoming
+                                      events.
+                                    </p>
+
+                                    <div class="d-block">
+                                        <a class="btn btn-rounded" href="#">Turn On</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-center">Want to update your profile?</h2>
+
+            <div class="d-flex justify-content-center mt-4">
+                <a class="btn btn-rounded" href="/expert-profile">Go to my profile page</a>
+            </div>
+        </div>
+    </section>
+</div>

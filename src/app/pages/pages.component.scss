@@ -1,0 +1,255 @@
+.page-content.no-padd {
+  padding: 80px 0;
+}
+
+.no-submenu ul.top-nav.mbl-hide.show-mbl-menu {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .page-content.no-padd {
+    padding: 48px 0;
+  }
+}
+
+// Modals
+.modal.page-m {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.modal.openJob.page-m {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  opacity: 1;
+  background: #0000004a;
+
+  // .overlay {
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 100vw;
+  //   background: #000;
+  //   opacity: 0.8;
+  // }
+  .modal-dialog {
+    top: 15%;
+    width: 80%;
+    max-width: 80%;
+    padding: 48px 88px;
+    background: #F5F1ED;
+    border-radius: 16px;
+
+    .modal-content {
+      border: none;
+      background: transparent;
+      .modal-body {
+        padding: 0;
+
+        .types-notis {
+          margin-bottom: 100px;
+          .top-t {
+            align-items: center;
+            margin-bottom: 34px;
+
+            p.ttl {
+              font-family: 'Jost';
+              font-style: normal;
+              font-weight: 700;
+              font-size: 15px;
+              line-height: 135%;
+              color: #1F1F1F;
+              margin: 0 0 0 3px;
+
+              span {
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        .table-notis {
+          .t-div {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            .org-name {
+              width: 40%;
+            }
+
+            .org-sec {
+              width: 40%;
+            }
+
+            .org-action {
+              width: 10%;
+            }
+
+            .org-status {
+              width: 10%;
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              ::ng-deep {
+                .mat-slide-toggle-thumb, .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+                  background-color: #F5F1ED;
+                }
+                .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+                  background-color: #A95454;
+                }
+              }
+            }
+
+            p {
+              margin: 0;
+            }
+            .org-action-t {
+              width: 25%;
+              p {
+                display: flex;
+                flex-direction: column;
+                span {
+                  font-family: 'BIZ UDPGothic';
+                  font-style: normal;
+                  font-weight: 400;
+                  font-size: 13px;
+                  line-height: 151.2%;
+                  text-decoration-line: underline;
+                  text-transform: uppercase;
+                  color: #1F1F1F;
+                }
+              }
+            }
+          }
+
+          .header {
+            padding-bottom: 10px;
+
+            p {
+              font-family: 'Jost';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 13px;
+              line-height: 139%;
+              color: #808192;
+            }
+          }
+
+          .border-b {
+            border-bottom: 1px solid #D9D9D9;
+          }
+
+          .d-div {
+            padding: 16px 0;
+
+            .org-name {
+              display: flex;
+              column-gap: 20px;
+              align-items: center;
+
+              img {
+                border-radius: 50%;
+                width: 55px;
+                height: 55px;
+              }
+
+              h4 {
+                font-family: Jost;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 151.2%;
+                text-transform: uppercase;
+                color: #A95454;
+                margin-bottom: 0;
+              }
+            }
+
+            .org-sec p {
+              font-family: 'Jost';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 13px;
+              line-height: 151.2%;
+              color: #1F1F1F;
+            }
+
+            .org-action p {
+              font-family: 'Jost';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 13px;
+              line-height: 151.2%;
+              text-decoration-line: underline;
+              color: #1F1F1F;
+            }
+          }
+        }
+        .types-notis:last-child {
+          margin-bottom: 58px;
+        }
+      }
+    }
+
+    .modal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0;
+      border: 0;
+      column-gap: 0;
+      padding: 0;
+
+      button.btn.btn-default {
+        border: 0.5px solid #1f1f1f;
+        border-radius: 35px;
+        padding: 0;
+        height: 59px;
+        width: 235px;
+        margin: 0;
+        font-family: "BIZ UDPGothic";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 151.2%;
+        color: #1f1f1f;
+      }
+
+      button.btn:hover {
+        border: 0.5px solid #1f1f1f;
+      }
+    }
+  }
+
+  .modal-header.top-b {
+    padding: 0;
+    margin-bottom: 80px;
+    border: 0;
+
+    .left-toggles {
+      column-gap: 55px;
+    }
+
+    p.close {
+      font-family: 'Jost';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 151.2%;
+      text-decoration-line: underline;
+      color: #1F1F1F;
+      margin: 0;
+    }
+  }
+}

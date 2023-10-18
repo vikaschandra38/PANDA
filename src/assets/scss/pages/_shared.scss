@@ -1,0 +1,178 @@
+ .card.card-announcement {
+     .card-body {
+         min-height: 352px;
+         padding: 32px 34px;
+         border-radius: 67px !important;
+
+         .sectors {
+             list-style: none;
+             padding: 0;
+             margin-bottom: 0;
+
+             li {
+                 display: inline-block;
+                 margin: 0 12px 0 0;
+
+                 &::before {
+                     content: "-\00a0"
+                 }
+
+                 a {
+                     font-family: 'Jost';
+                     font-style: normal;
+                     font-size: 10px;
+                     font-weight: 600;
+                     line-height: 14px;
+                     text-decoration: none !important;
+                     color: #A95454;
+                 }
+             }
+         }
+
+         h5 {
+            &.bg-asterisk {
+                background-image: url('../../images/union-colored.png');
+                background-repeat: no-repeat;
+                background-position: left center;
+                background-size: 22px;
+                padding-left: 30px;
+            }
+         }
+     }
+
+     @media (max-width: 576px) {
+        .card-body {
+            min-height: 280px;
+            padding: 24px 24px;
+            border-radius: 42px !important;
+
+            h5 {
+                &.bg-asterisk {
+                    background-size: 18px;
+                    padding-left: 26px;
+                }
+            }
+        }
+     }
+ }
+
+ .card.card-job-offer {
+    .card-body {
+         min-height: 352px;
+         padding: 30px 24px 24px 24px;
+         border-radius: 112px !important;
+     }
+
+     @media (max-width: 576px) {
+        .card-body {
+            min-height: 142px;
+            padding: 8px 8px;
+            border-radius: 45px !important;
+        }
+        
+        h3 {
+            padding: 0px 10px;
+            min-height: 30px;
+        }
+
+        p {
+            font-size: 10px;
+            line-height: 13px;
+        }
+
+        .btn-rounded {
+            padding: 8px 26px;
+            min-width: auto;
+            font-size: 11px;
+            line-height: 12px;
+        }
+     }
+ }
+
+ .card-expert {
+    .card-body {
+        .expert-img {
+            border-top-left-radius: 162px !important;
+            border-top-right-radius: 162px !important;
+    
+            img {
+                border-top-left-radius: 162px !important;
+                border-top-right-radius: 162px !important;
+            }
+
+            h5 {
+                span {
+                    font-weight: 400;
+
+                    &.bg-ellipse {
+                        margin-left: 18px;
+                        padding-left: 24px;
+                        background-image: url('../../images/ellipse.png');
+                        background-repeat: no-repeat;
+                        background-position: left center;
+                        background-size: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .card-body {
+            .expert-img {
+                border-top-left-radius: 85px !important;
+                border-top-right-radius: 85px !important;
+
+                img {
+                    border-top-left-radius: 85px !important;
+                    border-top-right-radius: 85px !important;
+                }
+            }
+        }
+    }
+ }
+
+ .card-organization {
+    .card-body {
+        .organization-img {
+            border-top-left-radius: 162px !important;
+            border-top-right-radius: 162px !important;
+    
+            img {
+                border-top-left-radius: 162px !important;
+                border-top-right-radius: 162px !important;
+            }
+
+            h5 {
+                span {
+                    font-weight: 400;
+
+                    &.bg-ellipse {
+                        margin-left: 18px;
+                        padding-left: 24px;
+                        background-image: url('../../images/ellipse.png');
+                        background-repeat: no-repeat;
+                        background-position: left center;
+                        background-size: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .card-body {
+            .organization-img {
+                border-top-left-radius: 85px !important;
+                border-top-right-radius: 85px !important;
+
+                img {
+                    border-top-left-radius: 85px !important;
+                    border-top-right-radius: 85px !important;
+                }
+            }
+        }
+    }
+ }
+
+ 

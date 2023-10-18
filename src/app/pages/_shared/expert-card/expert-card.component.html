@@ -1,0 +1,13 @@
+<div class="card card-expert">
+    <div class="card-body">
+        <div class="expert-img d-inline-block position-relative">
+            <img class="img-fluid" src="{{expert.profile.profileImg ? expert.profile.video : '../../../assets/images/organizations/expert-1.png'}}">
+
+            <div class="d-block text-start" >
+                <h5 class="name text-uppercase text-red mt-3 mb-1">{{expert.profile.fname}} {{expert.profile.lname}}</h5>
+                <h5 class="mb-0"><strong>{{expert.profile.title}}<span class="bg-ellipse d-none d-xl-inline-block">{{expert.profile.location}}</span></strong></h5>
+                <h5 class="d-inline-block d-xl-none"><span>{{expert.profile.location}}</span></h5>
+            </div>
+        </div>
+    </div>
+</div>

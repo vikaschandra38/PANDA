@@ -1,0 +1,256 @@
+#register {
+  .card .card-body {
+    padding: 56px 16px 0 16px;
+    border: 1px solid #E0E0E0;
+    border-radius: 250px 250px 0px 0px;
+    img {
+      margin-bottom: 50px;
+    }
+    h3 {
+      font-size: 34px;
+    }
+    h4 {
+      font-size: 27px;
+      color: #1F1F1F;
+      line-height: 39px;
+      span {
+        color: #B52020;
+      }
+    }
+    .form-container {
+      margin-top: 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 58px;
+      .relative {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        row-gap: 5px;
+        width: 100%;
+        margin-bottom: 48px;
+        position: relative;
+        p.show-p {
+          position: absolute;
+          right: 0;
+          margin-bottom: 0;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          text-decoration-line: underline;
+          color: #1F1F1F;
+          bottom: 22px;
+          cursor: pointer;
+        }
+        p.email-error {
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 140%;
+          color: #ACB5BD;
+          margin: 0;
+          a {
+            text-decoration: underline;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 140%;
+            color: #ACB5BD;
+          }
+        }
+        input {
+          width: 100%;
+          border: 0;
+          border-bottom: 2px solid #E2E2E2;
+          height: 42px;
+          background: transparent;
+        }
+      }
+
+      button {
+        border: 0.5px solid #1F1F1F;
+        border-radius: 35px;
+        margin-top: 100px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 60px;
+        justify-content: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 151.2%;
+        color: #1F1F1F;
+      }
+
+    }
+  }
+
+  .input-group{
+    width: 100%;
+          border: 0;
+          background: transparent;
+          border-bottom: 2px solid #E2E2E2;
+          input {
+           width: 100%;
+            border: 0;
+            
+            height: 42px;
+            background: transparent;
+          }
+
+          .show-p{
+            text-decoration: underline;
+            cursor: pointer;
+          }
+  }
+  .form-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2px 76px 24px;
+    h5 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 22px;
+      color: #000000;
+      margin-bottom: 16px;
+    }
+    .relative {
+      margin-bottom: 18px;
+    }
+    button.btn.btn-rounded {
+      margin-top: 44px;
+      margin-bottom: 68px;
+      font-family: 'BIZ UDPGothic';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 151.2%;
+      color: #1F1F1F;
+      height: 59px;
+    }
+    p.tnc {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #ACB5BD;
+      margin: 0;
+      a {
+        color: #ACB5BD;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.container.check-container {
+  display: block;
+  position: relative;
+  padding-left: 38px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: #1F1F1F;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 28px;
+  width: 28px;
+  background-color: transparent;
+  border: 2px solid #E0E0E0;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+  background-color: transparent;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked~.checkmark {
+  background-color: transparent;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 5px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: url(../../../assets/images/union.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.required-f {
+    color: red;
+    margin: 0;
+}
+ @media (max-width: 576px) {
+  #register .card {
+    .card-body {
+      padding: 46px 16px 0 16px;
+      img {
+        margin-bottom: 30px;
+      }
+      .form-container {
+        padding: 0 10px;
+        .relative p.show-p {
+          display: none;
+        }
+      }
+    }
+  }
+  #register .form-bottom {
+    padding: 2px 20px 24px;
+    h5 {
+      display: none;
+    }
+    button.btn.btn-rounded {
+      margin-top: 29px;
+      margin-bottom: 63px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      max-width: 235px;
+    }
+  }
+}

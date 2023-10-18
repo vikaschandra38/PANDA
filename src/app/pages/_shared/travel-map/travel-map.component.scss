@@ -1,0 +1,129 @@
+.travelMap {
+  width: 100%;
+  height: 500px;
+  border-radius: 250px 0px 0px 0px;
+  @media (max-width: 576px) {
+    border-radius: 62px 62px 0px 0px;
+  }
+}
+
+// .customMarker {
+//   position: absolute;
+//   cursor: pointer;
+//   background: #424242;
+//   width: 100px;
+//   height: 100px;
+//   /* -width/2 */
+//   margin-left: -50px;
+//   /* -height + arrow */
+//   margin-top: -110px;
+//   border-radius: 10px 10px 50px 50px;
+//   padding: 0px;
+// }
+
+// .customMarker:after {
+//   content: "";
+//   position: absolute;
+//   bottom: -10px;
+//   left: 40px;
+//   border-width: 10px 10px 0;
+//   border-style: solid;
+//   border-color: #424242 transparent;
+//   display: block;
+//   width: 0;
+// }
+
+// .customMarker img {
+//   width: 90px;
+//   height: 90px;
+//   margin: 5px;
+//   border-radius: 10px 10px 50px 50px;
+//   border-left: 70px solid transparent;
+//   border-right: 70px solid transparent;
+// }
+
+// .gm-style img {
+//   position: absolute;
+//   left: 0px;
+//   top: 0px;
+//   user-select: none;
+//   width: 48px;
+//   height: 48px;
+//   border: 0px;
+//   padding: 0px;
+//   margin: 0px;
+//   /* max-width: none; */
+//   transform: rotate(-45deg);
+//   opacity: 1;
+// }
+
+.org-status {
+  ::ng-deep {
+
+    .mat-slide-toggle-thumb,
+    .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+      background-color: #F5F1ED;
+    }
+
+    .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+      background-color: #A95454;
+    }
+  }
+}
+
+::ng-deep {
+  // .marker {
+  //   width: 60px !important;
+  //   height: 60px !important;
+  //   cursor: pointer;
+  //   border-radius: 50% 50% 0px 50%;
+  //   transform: rotate(45deg);
+  //   overflow: hidden;
+  //   position: absolute;
+
+  //   img {
+  //     width: 70px;
+  //     height: 70px;
+  //     transform: rotate(-45deg);
+  //   }
+  // }
+
+  #markerLayer {
+    div {
+      width: 60px !important;
+      height: 60px !important;
+      cursor: pointer;
+      border-radius: 50% 50% 0px 50%;
+      transform: rotate(45deg);
+      position: absolute;
+
+      img {
+        width: 70px;
+        height: 70px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+
+  a[href^="http://maps.google.com/maps"],
+  a[href^="https://maps.google.com/maps"] {
+    display: none !important;
+  }
+
+  .gmnoprint a,
+  .gmnoprint span,
+  .gm-style-cc {
+    display: none;
+  }
+}
+
+// div[title="travelMapExpert"] {
+//   width: 60px;
+//   height: 60px;
+//   cursor: pointer;
+//   border-radius: 50% 50% 0px 50%;
+//   transform: rotate(45deg);
+//   overflow: hidden;
+//   position: absolute;
+// }

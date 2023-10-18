@@ -1,0 +1,28 @@
+<div class="d-block">
+  <div class="card rounded-top text-center">
+    <div class="card-body bordered" *ngIf="emailConfirmed != ''">
+      <div *ngIf="emailConfirmed == 'confirmed'; then confirm; else expire"></div>
+      <ng-template #confirm>
+        <div class="bordered-form">
+          <img src="../../../assets/images/union.png" />
+          <h3 class="he1">Congratulations...</h3>
+          <h3 class="he2">You’re in!</h3>
+          <h3 class="he3">What’s Next?</h3>
+          <h3 class="he4">
+            Click the button to below to sign in, complete your profile and
+            start networking
+          </h3>
+        </div>
+        <button class="btn btn-rounded">Sign in</button>
+      </ng-template>
+      <ng-template #expire>
+        <div class="bordered-form">
+          <img src="../../../assets/images/union.png" />
+          <h3 class="he4">
+            {{emailConfirmed}}
+          </h3>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

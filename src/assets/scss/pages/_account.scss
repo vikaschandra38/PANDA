@@ -1,0 +1,96 @@
+.account {
+    padding: 0px;
+
+    .top-nav {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+
+        li {
+            display: inline-block;
+            // margin: 0px 6px;
+            font-family: 'Jost';
+            font-style: normal;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+
+            border-bottom: 1px solid #E0E0E0;
+
+            &:not(:last-child)::after {
+                content: "or";
+            }
+
+            a {
+                display: inline-block;
+                margin: 0px 12px;
+                padding-bottom: 12px;
+                color: #1F1F1F;
+
+                border-bottom: 5px solid transparent;
+
+                &.active {
+                    border-bottom: 3px solid #A95454;
+                }
+            }
+        }
+    }
+
+    .auth-full-bg {
+        // height: 100vw;
+        // padding: 34px 34px;
+        // background: #F5F1ED;
+        // background: url(../../images/bg-auth-overlay.png);
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-position: center;
+
+        height: 100%;
+        background: #F5F1ED;
+        background: url(../../images/bg-auth-overlay.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+
+        h2 {
+            position: relative;
+            font-family: 'KyivType Sans';
+            font-style: normal;
+            font-size: 45px;
+            font-weight: 500;
+            line-height: 60px;
+            color: #F5F1ED !important;
+        }
+
+        @media (max-width: 768px){
+            height: 422px;
+        }
+    }
+
+    .auth-full-page-content {
+        height: 100vh;
+        padding: 54px 36px 36px 36px;
+
+        .card {
+            .card-body {
+                // padding: 56px 18px 56px 18px;
+
+                img {
+                    margin-bottom: 88px;
+                }
+
+                h3 {
+                    font-family: 'Jost';
+                    font-style: normal;
+                    font-size: 38px;
+                    font-weight: 500;
+                    line-height: 48px;
+                }
+
+                p {
+                    color: #ACB5BD;
+                }
+            }
+        }
+    }
+}

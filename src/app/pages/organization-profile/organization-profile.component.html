@@ -1,0 +1,509 @@
+<div class="content-container organization-profile d-flex" id="organization-profile">
+  <div class="org-preview">
+    <p class="prev">Preview Page</p>
+    <div class="content-container organization-profile" *ngIf="companyService.companyProfile">
+      <section class="section-hero">
+        <div class="container-fluid">
+          <div class="row align-items-stretch justify-content-between">
+            <div class="col-6">
+              <div class="card text-center">
+                <div class="card-body border-dark">
+                  <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                    <div class="avatar-lg">
+                      <img class="rounded-circle" [src]="'http://api.panda-networking.com/v1/api/media/' + companyService.companyProfile.profile.logo">
+                    </div>
+
+                    <h1 class="title-left">{{companyService.companyProfile.profile.name}}</h1>
+
+                    <div
+                      class="d-flex flex-column flex-xl-row align-items-start align-items-xl-center justify-content-start w-100">
+                      <span class="bg-asterisk">{{companyService.companyProfile.contact.headoffice}}</span>
+                      <!-- <span class="bg-asterisk">Morocco</span> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card text-center c-right">
+                <div class="card-body bg-dark">
+                  <div class="d-flex align-items-center justify-content-center h-100">
+                    <div class="d-block">
+                      <h1 class="title-r">Share this page</h1>
+
+                      <button class="btn btn-rounded">
+                        Share
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 col-xl-8">
+              <h2>“ {{companyService.companyProfile.profile.quote}} ”</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-about">
+        <div class="container-fluid">
+          <h1 class="section-title">About The Organization</h1>
+
+          <div class="row align-items-stretch justify-content-between amo">
+            <div class="col-6 col-xl">
+              <div class="card text-center">
+                <div class="card-body">
+                  <img class="amo-img" src="./../../../assets/images/union.png">
+                  <h4 class="text-uppercase amo-t">Sector</h4>
+                  <p class="text-red">{{companyService.companyProfile.profile.sector}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-xl">
+              <div class="card text-center">
+                <div class="card-body">
+                  <img class="amo-img" src="./../../../assets/images/union.png">
+                  <h4 class="text-uppercase amo-t">Type</h4>
+                  <p class="text-red">{{companyService.companyProfile.profile.companyType}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-xl">
+              <div class="card text-center">
+                <div class="card-body">
+                  <img class="amo-img" src="./../../../assets/images/union.png">
+                  <h4 class="text-uppercase amo-t">Size</h4>
+                  <p class="text-red">
+                    < {{companyService.companyProfile.profile.companySize}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-xl">
+              <div class="card text-center">
+                <div class="card-body">
+                  <img class="amo-img" src="./../../../assets/images/union.png">
+                  <h4 class="text-uppercase amo-t">Founded in</h4>
+                  <p class="text-red">{{companyService.companyProfile.profile.foundedIn}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-xl">
+              <div class="card text-center">
+                <div class="card-body">
+                  <img class="amo-img" src="./../../../assets/images/union.png">
+                  <h4 class="text-uppercase amo-t">WEBSITE</h4>
+                  <p class="text-red">{{companyService.companyProfile.contact.website}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-presentation">
+        <div class="container-fluid">
+          <div class="row align-items-top justify-content-between">
+            <div class="col-xl-6">
+              <h1 class="section-title">Organization Profile</h1>
+
+              <p>{{companyService.companyProfile.profile.presentation}}</p>
+
+              <h4 class="">Specializations :</h4>
+
+              <p>{{companyService.companyProfile.profile.specialization}}</p>
+            </div>
+
+            <div class="col-xl-4">
+              <div id="presentationCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true"
+                data-bs-touch="true">
+                <div class="carousel-indicators justify-content-center">
+                  <button type="button" data-bs-target="#presentationCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#presentationCarousel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#presentationCarousel" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                </div>
+
+                <div class="card text-center">
+                  <div class="card-body">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="presentation-img d-inline-block position-relative">
+                          <div class="overlay d-flex align-items-center justify-content-center">
+                            <a href="#">Play</a>
+                          </div>
+
+                          <img class="img-fluid" src="./../../../assets/images/organization-private/organization-intro.png">
+                        </div>
+                      </div>
+                      <div class="carousel-item ">
+                        <div class="presentation-img d-inline-block position-relative">
+                          <div class="overlay d-flex align-items-center justify-content-center">
+                            <a href="#">Play</a>
+                          </div>
+
+                          <img class="img-fluid"
+                            src="./../../../assets/images/organization-private/organization-intro-1.png">
+                        </div>
+                      </div>
+                      <div class="carousel-item ">
+                        <div class="presentation-img d-inline-block position-relative">
+                          <div class="overlay d-flex align-items-center justify-content-center">
+                            <a href="#">Play</a>
+                          </div>
+
+                          <img class="img-fluid"
+                            src="./../../../assets/images/organization-private/organization-intro-2.png">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center justify-content-center text-center btn-cnt">
+                  <a class="btn btn-rounded" href="#">Next Video</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-news">
+        <div class="container-fluid">
+          <div class="row">
+            <h1 class="section-title">Organization’s news</h1>
+            <div class="col-12 news-feed d-flex">
+              <div class="col-4 news-left">
+                <!-- <div class="d-flex align-items-center justify-content-start add-new">
+                  <button class="btn btn-sm btn-circle ico-plus"></button>
+                  <h4 class="crt-n">Here’s what new in my organization</h4>
+                </div> -->
+                <div class="dl-sec">
+                  <h5><strong>Date: <span class="text-red">{{myNews[selectedNews].date}}</span></strong></h5>
+                  <h5><strong>Location: <span class="text-red">{{myNews[selectedNews].location}}</span></strong></h5>
+                </div>
+
+                <div class="d-flex flex-column align-items-center justify-content-center">
+                  <img class="img-fluid rounded-circle mb-2 mb-xl-4"
+                    src="./../../../assets/images/organization-private/news.png">
+
+                  <div class="shadow"></div>
+                </div>
+              </div>
+
+              <div class="col-4 news-right">
+                <div class="news-indicators">
+                  <p class="indicator" *ngFor="let news of myNews; let n=index" (click)="selectedNews=n"
+                    [ngClass]="{'active': selectedNews===n}"></p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center h-100">
+                  <div class="news-text d-block text-center border-dark h-100 ">
+                    <img src="./../../../assets/images/union.png">
+
+                    <h4><strong>{{myNews[selectedNews].newsTitle}}</strong></h4>
+
+                    <p>{{myNews[selectedNews].description}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-job-offers">
+        <div class="container-fluid">
+          <h1 class="section-title">Job Offers</h1>
+
+          <div class="row jobs">
+            <!-- <div class="col-6 col-xl-4">
+              <div class="card card-job-offer text-center">
+                <div class="card-body border-black">
+                  <div class="d-flex flex-column justify-content-between h-100">
+                    <div class="d-block">
+                      <h3>Add job offer</h3>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center h-100">
+                      <button class="btn btn-md btn-circle ico-plus"></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="col-6 col-xl-4 s-job" *ngFor="let job of companyService.companyProfile.jobs">
+              <div class="card card-job-offer text-center">
+                <div class="card-body border-black">
+                  <div class="d-flex flex-column align-items-stretch justify-content-between pb-4 h-100">
+                    <div class="d-block">
+                      <h3>Commercial Offer Manager</h3>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <h5><strong>Job Type</strong></h5>
+                        <h5 class="text-red">Full-time</h5>
+                      </div>
+                      <div class="col">
+                        <a href="#">View</a>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col d-none d-lg-block">
+                        <h5><strong>Status</strong></h5>
+                        <h5 class="text-red">Published</h5>
+                      </div>
+                      <div class="col">
+                        <a href="#">Delete</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section id="events" class="section-events">
+        <div class="events-slide">
+          <div class="container-fluid">
+            <div class="events-indicators">
+              <p class="indicator" *ngFor="let news of myEvents; let n=index" (click)="selectedEvent=n" [ngClass]="{'active': selectedEvent===n}"></p>
+            </div>
+          </div>
+
+          <div class="events-inner">
+            <div class="event-item">
+              <div class="container-fluid">
+                <div class="row align-items-stretch justify-content-between">
+                  <div class="col-6 col-xl-3">
+                    <div class="d-flex flex-column justify-content-between h-100">
+                      <!-- <div class="d-flex align-items-center justify-content-start pne">
+                        <button class="btn btn-sm btn-circle ico-plus"></button>
+                        <h4 class="ms-2 mb-0">Post New Event</h4>
+                      </div> -->
+
+                      <h1 class="section-title">My events</h1>
+
+                      <p class="mt-4 mb-0 mb-xl-4">{{myEvents[selectedEvent].description}}</p>
+
+                      <div class="d-none d-xl-block pt-4">
+                        <p class="btn btn-rounded" (click)="selectedEvent = selectedEvent+1">Next Page</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-xl-8">
+                    <div class="row">
+                      <div class="col-xl-6">
+                        <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                          <img class="img-fluid rounded-circle mb-2 mb-xl-4" [src]="myEvents[selectedEvent].image">
+
+                          <div class="shadow my-xl-4"></div>
+                        </div>
+                      </div>
+                      <div class="col-xl-6">
+                        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                          <div class="d-block mt-4 mt-xl-0 pb-xl-4">
+                            <h5 class="mb-0"><strong>The Event: <span
+                                  class="text-red">{{myEvents[selectedEvent].title}}</span></strong>
+                            </h5>
+                            <h5 class="mb-0"><strong>Date: <span
+                                  class="text-red">{{myEvents[selectedEvent].date}}</span></strong></h5>
+                            <h5 class="mb-xl-4"><strong>Location: <span
+                                  class="text-red">{{myEvents[selectedEvent].location}}</span></strong></h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row d-xl-none">
+                  <div class="col-xl-12">
+                    <div class="text-center mt-4 pt-4">
+                      <p class="btn btn-rounded" (click)="selectedEvent = selectedEvent+1">Next Page</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section-contact-details">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-6 mx-auto">
+              <div class="d-flex justify-content-center">
+                <div class="card rounded-top text-center">
+                  <div class="card-body bg-dark">
+                    <img src="./../../../assets/images/union.png">
+
+                    <h1>Contact the organization</h1>
+
+                    <div class="d-flex justify-content-center mt-5">
+                      <a class="btn btn-rounded" href="mailto:{{companyService.companyProfile.contact.email}}">Send an email</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="org-profile">
+    <h1 class="prf-ttl">
+      About my Organization
+      </h1>
+      <div class="form-cont">
+        <div class="status">
+          <div class="initials-status d-flex justify-content-between align-items-center">
+            <p>
+              <span>{{profileProgress}}%</span>
+              Profile completeness
+            </p>
+            <p class="lang">(English)</p>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" [style]="'width: '+ profileProgress +'%'" aria-valuenow="0" aria-valuemin="0"
+              aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <!-- Organization Details -->
+        <div class="general-info">
+          <h3>
+            General information
+            <img src="./../../../assets/images/union.png">
+          </h3>
+          <div class="form-field">
+            <p class="label">Organization Name*: <span>( max 50 characters)</span></p>
+            <input [(ngModel)]="myOrganization.orgName" [maxlength]="'50'" type="text" id="orgname" name="orgname" class="" />
+          </div>
+          <div class="form-field">
+            <p class="label">Organization Profile (Introduce and describe your organization)*: <span>( max 2600 characters)</span></p>
+            <input [(ngModel)]="myOrganization.orgProfile" [maxlength]="'2600'" type="text" id="orgProfile" name="orgProfile" class="" />
+          </div>
+          <div class="form-field upload-d">
+            <p class="label">Upload a picture about your organization: <span class="upload" (click)="onClick('org')">upload</span></p>
+            <input type="file" #fileUploadP id="fileUploadP" name="fileUploadP" accept="image/*" style="display:none;" />
+            <p *ngIf="myOrganization.orgPic">{{myOrganization.orgPic.name}}</p>
+            <!-- <input [(ngModel)]="myOrganization.orgPic" type="text" id="orgPic" name="orgPic" class="" /> -->
+          </div>
+          <div class="form-field">
+            <p class="label">Add a link to a video about your organization :</p>
+            <input [(ngModel)]="myOrganization.vidLink" type="text" id="vidLink" name="vidLink" class="" />
+          </div>
+          <div class="form-field">
+            <p class="label">Sector*: </p>
+            <input [(ngModel)]="myOrganization.sector" type="text" id="orgname" name="orgname" class="" />
+          </div>
+          <div class="form-field">
+            <p class="label">Specializations*: <span>( max 500 characters)</span></p>
+            <input [(ngModel)]="myOrganization.specialization" [maxlength]="'500'" type="text" id="orgname" name="orgname" class="" />
+          </div>
+          <div class="form-field">
+            <p class="label">Type of Organization*:</p>
+            <div class="checkboxes d-flex flex-wrap">
+              <div class="relative" *ngFor="let type of cType; let i=index">
+                <label class="container check-container">{{type.title}}
+                  <input name="type" id="{{type.title}}" type="radio" [value]="cType[i].title" [(ngModel)]="myOrganization.type">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-field">
+            <p class="label">Founding Date*: </p>
+            <input [(ngModel)]="myOrganization.foundingDate" type="text" id="orgname" name="orgname" class="" />
+          </div>
+
+          <div class="form-field">
+            <p class="label">Size* (number of employees): </p>
+            <div class="checkboxes d-flex flex-wrap">
+              <div class="relative" *ngFor="let size of cSize; let i=index">
+                <label class="container check-container">{{size.title}}
+                  <input name="size" id="{{size.title}}" type="radio" [value]="cSize[i].title" [(ngModel)]="myOrganization.size">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <p class="label">Tagline : <span>( max 30 characters)</span></p>
+            <textarea [(ngModel)]="myOrganization.tagline" [maxlength]="'30'" name="tagline" id="tagline" cols="30" rows="10"></textarea>
+          </div>
+          <div class="form-field upload-d">
+            <p class="label">Organization’s Logo: <span class="upload rounde" (click)="onClick('logo')">upload</span></p>
+            <input type="file" #fileUpload id="fileUpload" name="fileUpload" accept="image/*" style="display:none;"/>
+            <p *ngIf="myOrganization.orgLogo">{{myOrganization.orgLogo.name}}</p>
+            <!-- <input [(ngModel)]="myOrganization.orgLogo" type="text" id="orgname" name="orgname" class="" /> -->
+          </div>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="general-info">
+          <h3>
+            Contact details
+            <img src="./../../../assets/images/union.png">
+          </h3>
+          <div class="form-field">
+            <p class="label">Email*:</p>
+            <input [(ngModel)]="myOrganization.contactDetails.email" type="email" id="email" name="email" class="" />
+          </div>
+
+          <div class="form-field">
+            <p class="label">Phone :</p>
+            <input [(ngModel)]="myOrganization.contactDetails.phone" type="text" id="phone" name="phone" class="" />
+          </div>
+          <div class="form-field">
+            <p class="label">Website :</p>
+            <input [(ngModel)]="myOrganization.contactDetails.website" type="url" id="website" name="website" class="" />
+          </div>
+          <div class="form-field location">
+            <p class="label">Location:</p>
+
+            <div class="form-field location">
+              <p class="label">Street + n°*:</p>
+              <input [(ngModel)]="myOrganization.contactDetails.location.street" type="text" id="street" name="street" class="" />
+            </div>
+          <div class="form-field location">
+            <p class="label">Postal code:</p>
+            <input [(ngModel)]="myOrganization.contactDetails.location.postal" type="text" id="postal" name="postal" class="" />
+            </div>
+            <div class="form-field location">
+              <p class="label">City*:</p>
+            <input [(ngModel)]="myOrganization.contactDetails.location.city" type="text" id="city" name="city" class="" />
+            </div>
+            <div class="form-field location">
+              <p class="label">Province:</p>
+            <input [(ngModel)]="myOrganization.contactDetails.location.province" type="text" id="province" name="province" class="" />
+            </div>
+            <div class="form-field location">
+              <p class="label">Country*:</p>
+            <input [(ngModel)]="myOrganization.contactDetails.location.country" type="text" id="country" name="country" class="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Container -->
+        <div class="action-container">
+          <button class="btn btn-rounded" (click)="saveProfile()">
+            Save
+          </button>
+          <p>Clear all</p>
+        </div>
+      </div>
+  </div>
+</div>

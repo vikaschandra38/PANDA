@@ -1,0 +1,16 @@
+<div class="card card-organization">
+    <div class="card-body">
+        <div class="organization-img d-inline-block position-relative">
+            <img class="img-fluid" [src]="'http://api.panda-networking.com/v1/api/media/'+organization.profile.logo">
+
+            <div class="d-block text-start" >
+                <h5 class="name text-uppercase text-red mt-3 mb-1">{{organization.profile.name}}</h5>
+                <h5 class="text-meta d-flex">
+                  <strong>{{organization.profile.sector}}</strong>
+                  <b></b>
+                  {{organization.profile.companyType}}
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
